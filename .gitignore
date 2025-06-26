@@ -1,0 +1,7 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+/abm_run/mozzie_outputs
+/abm_run/host_outputs
