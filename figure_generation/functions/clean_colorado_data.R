@@ -13,6 +13,8 @@ clean_colorado_data<-function(){
                       "pool_size"=col$total,"WNV"=col$test_code, "ctval"=col$cq)
   dat_col$state<-rep("Colorado")
   dat_col=subset(dat_col,dat_col$surv_year!=2024)
+  dat_col <-dat_col %>% filter(species=="Pipiens" | species=="Tarsalis")
+  
   
   return(dat_col)
 }
