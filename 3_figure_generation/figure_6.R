@@ -14,10 +14,6 @@ cts_per_pool= readRDS("pre_calculations/pooled_cts/cts_per_pool_demo.rds") #they
 
 ct_threshold=40
 
-
-#all_dat=subset(all_data,all_data$sim_number==1)
-ct_threshold=40
-
 #KDE estimation:
 positive_ctss<-all_data %>% filter(ct_value < ct_threshold) %>% pull(ct_value)
 
