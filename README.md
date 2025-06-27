@@ -1,2 +1,2 @@
-# west_nile_virus_abm
+# Tracking West Nile Virus dynamics using viral loads from trapped mosquitoes
 
