@@ -28,3 +28,6 @@
    c) **Run**  _figure_x.R_ (x = 1:7) to generate the figure (number in the same order as in the manuscript) required.  
    d) **Run** _supplement_figures.R_ to generate figures in the Supplementary Material.
 
+ #### Nebraska and Colorado data: 
+ Can be found in 3_figure_generation/data folder 
+  
