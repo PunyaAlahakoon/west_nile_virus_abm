@@ -15,13 +15,13 @@
     This script includes and an example based on the parameters used in the model. 
 
    
-3. **_2_kde_calculations_:**  
+2. **_2_kde_calculations_:**  
   **Run:**  
    a) **Open** _2_kde_calculations.Rproj_ R project.
    b) **Run** _kde_pre_calculations.R_ to calculate and store KDE approximations based on different pool sizes and number of positive samples in a pool. 
 
    
-5. **_3_figure_generation_:**  
+3. **_3_figure_generation_:**  
   **Run:**  
    a) **Open** _figure_generation.Rproj_ R project.  
    b) Run the _figure_x.R_ (x = 1:7) to generate the figure (number in the same order as in the manuscript) required. 
