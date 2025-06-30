@@ -29,7 +29,6 @@ private:
   int moz_parent_id; 
   int moz_age; //mozzie age 
   int moz_age_to_die; //randomly allocate an age to die as well when creating a mozzie 
- // int moz_id_gen=0; //initial mozzie id 
   NumericVector viral_dynamics;
   //viral dynamics individual level parameters:
   double t_p; 
@@ -86,17 +85,7 @@ public:
   
   static void set_viral_static_params(NumericVector viral_pop_params,
                                       NumericVector ind_sigmas,NumericMatrix betas);
-  
 
-
-  
- // static double t_lod_mean; //covariate level latent limit of detection 
-  //static double t_r_mean; 
-  //static double c_lod_mean; //covariate-level ct valaue of limit of detection
-  //static double omega_p_mean; //tp-to
-  //static double omega_p_sigma; 
- // static double omega_r_mean; //tr-tp
- // static double omega_r_sigma;                                                                
 
 
   
@@ -138,9 +127,6 @@ public:
   void set_infectious_period_moz(double current_time);
   //void viral_load_curve_moz(IntegerVector ages,NumericVector kinetic_pars,int times);
   void viral_load_curve_moz(int st_time,int times);
- // double get_viral_loads_at_t(int t);
- //void generate_indi_para_set(int st_time); 
-  //NumericVector get_viral_load_curve_moz();
   double current_viral_load(int current_time,double host_current_ct, int method); 
   NumericVector m22_get_current_viral_load(double bird_ct_bitten);
   NumericVector m33_get_current_viral_load(double host_current_ct, double prob_events, int current_time); 
@@ -149,11 +135,7 @@ public:
   double m1_get_current_viral_load(int current_time);//ct model without considering the ct 
   //values of the hosts 
   NumericVector m2_get_current_viral_load(double host_current_ct, double prob_events,int current_time);
-  //prob_events==probability of changing the ct dynamics based on the 
-  //ct model is contstant. ct mozzie ==bird ct constant or bird ct starting point 
-  //double m3_get_current_viral_load(int current_time,double host_current_ct);
-  
-  
+
   //ct model starts with the bird ct 
  NumericVector get_mozzie_ct_params(); 
   int get_inf_start_time(); 
