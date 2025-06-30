@@ -14,9 +14,9 @@
 
 
 ### More details:  
-1. **host.hpp:** header declarations including class and function definitions of the bird agents.
+1. **host.hpp:** Header declarations including class and function definitions of the bird agents.
 2. **host.cpp:** Implementation details of the bird agents.
-3. **mosquito.hpp:** header declarations including class and function definitions of the mosquito agents. 
+3. **mosquito.hpp:** Header declarations including class and function definitions of the mosquito agents. 
 4. **mosquito.cpp:** Implementation details of the mosquito agents.
 5. **interface.cpp:** Implementation of the agent-based model.
     This script calls files 1-4 above to call the characteristics of the bird and mosquito agents.
@@ -26,3 +26,14 @@
    **To run the example,** run this script without making any changes to the model.  
    **To run different simulations,** change the parameters in this script as desired. 
    
+
+#### Other folders:  
+1. **functions:** This folder contains the sinusoidal functions used for overwintering and other parameters in the ABM.  
+2. **mozzie_outputs:** This folder contains the synthetic data related to the mosquitoes that will be stored after running the ABM:   
+   a) **mozzie_object_data:** Stores the mosquito object characteristics at each time-step.  
+   b) **params:** Stores the parameters of some of the mosquito objects' Ct model.  
+   c) **states:** Store the prevalence, incidence, total population, number of susceptible, deaths, etc, of the mosquito population at each time-step.
+3. **host_outputs:** This folder contains the synthetic data related to the birds that will be stored after running the ABM:   
+   a) **host_object_data:** Stores the bird object characteristics at each time-step.  
+   b) **params:** Stores the parameters of some of the bird objects' Ct model.  
+   c) **states:** Store the prevalence, incidence, total population, number of susceptible, deaths, etc, of the bird population at each time-step.  
