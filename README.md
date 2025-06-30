@@ -24,4 +24,7 @@
 3. **_3_figure_generation_:**  
   **Run:**  
    a) **Open** _figure_generation.Rproj_ R project.  
-   b) Run the _figure_x.R_ (x = 1:7) to generate the figure (number in the same order as in the manuscript) required. 
+   b) **Run** _required_packages.R_ to load or install the required packages.   
+   c) **Run**  _figure_x.R_ (x = 1:7) to generate the figure (number in the same order as in the manuscript) required.  
+   d) **Run** _supplement_figures.R_ to generate figures in the Supplementary Material.
+
