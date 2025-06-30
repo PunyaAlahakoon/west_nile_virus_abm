@@ -4,7 +4,10 @@
  ## This folder contains all the codes required to run the ABM with an example. 
 
 ## Steps: 
-1. OPEN the project run_abm.Rproj
-2. RUN required_r_packages.R file to load or install the required packages 
-3. RUN run_abm.R to run the ABM with the default parameters that are used in the manuscript. 
-
+1. **_1_abm_structure_:**  
+  This folder contains the code for the agent-based model written in Rcpp.  
+**Run:**  
+  a) **Open** _abm_run.Rproj_ R project.    
+  b) **Run** _required_r_package.R_ to install or load the packages required.  
+  c) **Run** _run_abm.R_ to run the agent-based model.  
+    This script includes and an example based on the parameters used in the model. 
