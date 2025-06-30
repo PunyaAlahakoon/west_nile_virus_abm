@@ -1,5 +1,4 @@
-//in this version, save all the details of the mozzies in csv files. 
-//do the ct sampling later 
+
 
 #include <Rcpp.h>
 #include <iostream>
@@ -45,8 +44,6 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
   double dt=1;   //timestep 
   //double alpha=0.9;//amplitude of seasonal variation 
   double t_rate=0; //time dependent birth rate with seasonality 
-  //  double prBite= 1-exp(-0.5*dt); //probility of a bite ocuuring of a mozzie
-//double prDeath=1-exp(-mozDeathRate*dt); //[probability of a death occuring of a mozzie ] no longer using this 
   double prob_death_hosts=1-exp(-host_death_rate*dt); 
   
   
@@ -89,24 +86,13 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
   host_ct_params.open(file_host_pars); 
   host_ct_params<<"host_id,current_time,inf_start_time,t_0,t_p,chi,t_r,\n";
   
-  //set the viral parameters:
-  /*
-   Mosquito::set_viral_static_params( viral_pop_params,
-   ind_sigmas,betas);
-   
-   */ 
-  //create a vector to sample every sample_frq 
+
   
   
   //IntegerVector ages=seq_len(time);
   IntegerMatrix timeStatehosts(time+1,5);  //initialise a matrix to store states of hosts
   //suscetible, infectious, recovered, dead, births 
   IntegerMatrix timeStateMozzies(time+1,5); //for mozzies== susceptible, infectious, dead, births, 
-  //new adults who join the population of mozzies, they are all females 
-  
-  // double mozInfPeriod;//infectious period for a mozzie 
-  //double hostInfPeriod; //infectious period for a host 
-  //NumericVector nInfIniM(iniInfectedMozzies); //store id of initial infected mozzies 
   NumericVector nInfIniM; 
   
   vector<Host*> current_hosts;
@@ -116,10 +102,7 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
   vector<Mosquito*> ovewintering_mozzies;
   vector<Mosquito*> digesting_mozzies; 
   
-  //vector<host*> current_host_state;// store the current state of the hosts 
-  //vector<Mosquito*> current_mozzie_state; //store the current state of the mozzies 
   NumericVector infectiousPeriods_mozzie; 
-  // NumericVector ct_dynamics(time); //initialise an empty vector to include in the constructor for the viral dynamics 
   int mozzie_births; 
   //NumericVector pro_female_mozzies; //number of female mozzies over time
   NumericVector trapped_mozzies;//number of mozzies that get trapped
@@ -141,10 +124,6 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
   
   NumericVector death_ages; 
   NumericVector mozzie_ages; 
-  //create a matrix to store the parameter set of random mozzies: 1 mozzie per time
-//  NumericMatrix mozzie_ct_params(time+1,5);//columns=paramters 
-  
-  // nInfIniM=sample(iniInfectedMozzies, iniInfectedMozzies, bool replace = false, sugar::probs_t probs = R_NilValue, bool one_based = true)//??why is this function not working? 
   nInfIniM=Rcpp::sample(nMozzies,iniInfectedMozzies);//replace=false 
   //set the initial inectious mozzies
   
@@ -157,7 +136,6 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
       current_mosquitoes[j]->infect_moz();//set the mozzie as infectious and set the infection start day to zero
       current_mosquitoes[j]->set_inf_start_time(0);
       //set the infected mozzie's gender to female in case they were male
-    //  current_mosquitoes[j]->set_mozzie_sex_to_female(); 
     }
   }
   
@@ -300,12 +278,6 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
               double bird_ct=current_hosts[rhost]->get_current_ct_host(i); 
               current_mosquitoes[j]->set_bitten_bird_ct_to_mozzie(bird_ct,viral_percent_from_birds,prob_ct_model_change); 
               current_mosquitoes[j]->set_ct_params(); 
-              //generate a viral kinetics curve:
-              //  current_mosquitoes[j]->generate_indi_para_set(i); 
-              //  current_mosquitoes[j]->viral_load_curve_moz(i,time);
-            //  if(VERBOSE){
-               // Rcpp::Rcout << "========== Host ct value =========="<< bird_ct << std::endl;
-            //  }
             } 
           } else if((current_hosts[rhost]->get_host_inf_state()==Host::hState::hSusceptible) && 
             (current_mosquitoes[j]->get_moz_inf_state()==Mosquito::mState::mInfected)){ //host gets infected
@@ -325,9 +297,6 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
         }
       }
     }
-    
-    
- 
     
     //check if the digesting mozzies can go back to the current population:
     for(int a=0; a<digesting_mozzies.size();a++){
@@ -355,20 +324,6 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
  
       }
     }
-   
-    
-    
-    //create a random number from a poisson distribution to see how many deaths per day
-    /*
-    int nDeaths; 
-    NumericVector nds=Rcpp::rpois(1,mozDeathRate);
-    nDeaths=nds[0];
-    //create random numbers:
-    IntegerVector randD=Rcpp::sample(current_mosquitoes.size(),nDeaths); 
-    for(int b=0;b<nDeaths;b++){
-      current_mosquitoes[randD[b]]->death_moz();
-    }
-    */ 
     
     //remove the dead mozzies 
     for(int k=0; k<current_mosquitoes.size();k++){
@@ -383,9 +338,6 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
     //0) birth of mozzies:
     int v_new_inf_moz;
     int o_mozzie_births;
-   // if(female_moz_pop>0){
-      //add seasonality:
-      // t_rate=100*(1-0.9*cos(2*M_PI*i/365));//M_PI=pi. see the file that tests this function separately to check 
       t_rate=mozzie_birth_rate_t[i]; 
       o_mozzie_births=R::rpois(t_rate*dt);
       //add more births as vertical transmitted mozzies:
@@ -410,15 +362,6 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
         new_inf_mozzies++; 
       }
       
-      //  IntegerVector female_mozzie_ids;
-      /*IntegerVector female_mozzie_indices; //indices of the female mozzies from the current mozzie vector 
-      for(int k=0;k<current_mosquitoes.size();k++)
-        if(current_mosquitoes[k]->get_mozzie_sex()==Mosquito::mSex::mFemale){
-          // int moz_id= current_mosquitoes[k]->get_mozzie_id(); 
-          // female_mozzie_ids.push_back(moz_id);
-          female_mozzie_indices.push_back(k);
-        }
-        */
         //add new births  as egg states to the population 
         int n=0; 
         //add eggs to a vector separtely and don't add them to the total population yet:
@@ -430,21 +373,12 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
           while(n<o_mozzie_births){
             //for(int n=0;n<mozzie_births;n++){
             //for each mozzie that's going to be born, find the female parent:
-            // IntegerVector parent=Rcpp::sample(Mosquito::FEAMLE_MOZZIE_IDS,1); //it's okay to have the same parent:this code seem to be working. but using the female_mozzie_ids just in case
-            // IntegerVector parent_indexx=Rcpp::sample(female_mozzie_indices,1); 
             int parent_index=parent_indexx[n];
             // int parent_id=female_mozzie_ids[parent_index];
             int parent_id=current_mosquitoes[parent_index]->get_mozzie_id(); 
-            //current_mosquitoes[m]->get_parent()->get_species();
-            
-            //  int aa=find(current_mosquitoes.begin(),current_mosquitoes.end(),parent_id);
-            
-            //Mosquito::mState parent_state=current_mosquitoes[parent_index]->get_moz_inf_state(); 
-            //   Rcpp::Rcout << "parent_state: " << parent_state << std::endl;
             //create a new mozzie:
             Mosquito* birth_mozzie;
             Mosquito::mSpecies parent_sp=current_mosquitoes[parent_index]->get_mozzie_species();
-            // Mosquito::mSpecies parent_sp=static_cast<Mosquito::mSpecies>(rand()%4);
             // Rcpp::Rcout << "parent_sp: " << parent_sp << std::endl;
             //get the parent's infection state 
             Mosquito::mState parent_inf= current_mosquitoes[parent_index]->get_moz_inf_state(); 
@@ -462,7 +396,7 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
         }
   //  }
     
-    //check the egg age, if egg_period>=current time, chhange them to adult susceptible mozzies, 
+    //check the egg age, if egg_period>=current time, change them to adult susceptible mozzies, 
     //update the mozzie population 
     //new adults counter:
     int new_adults=0; //start he counter 
@@ -511,20 +445,6 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
       }
     }
     
-    /*
-    //check if the overwintering mozzies are ready to be active again, if so, send them back to the current population 
-    for(int b=0;b<ovewintering_mozzies.size();b++){
-      if(ovewintering_mozzies[b]->get_overwintering_period()>=i){
-        //make the mozzie active,
-        ovewintering_mozzies[b]->mozzie_become_active();
-        current_mosquitoes.push_back(ovewintering_mozzies[b]);//add to the current population 
-        ovewintering_mozzies.erase(ovewintering_mozzies.begin()+b);
-        if(VERBOSE){
-          Rcpp::Rcout << "========== mozzie overwinter over =========="<< b << std::endl;
-        }
-      }
-    }
-    */ 
     
     //4)host recovers 
     for(int k=0;k<nhosts;k++){
@@ -561,43 +481,6 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
       current_hosts.push_back(new_host);
     }
     
-    //because we are no longer removing the captured mozzies, it is okay to 
-    //calculate the remaining female mozzies here:
-    /*
-    NumericVector remaining_female_mozzies;
-    for(int j=0; j<current_mosquitoes.size();j++){
-      if(current_mosquitoes[j]->get_mozzie_sex()==Mosquito::mSex::mFemale){
-        remaining_female_mozzies.push_back(j);
-      }
-    }
-    female_moz_pop=remaining_female_mozzies.size(); 
-    //no need to calculate this!!!
-    pro_female_mozzies.push_back((float)female_moz_pop/current_mosquitoes.size()); 
-    */
-    
-    //capture some mozzies:
-    
-    //////MOZZIE CAPTURING?////////////////
-    //if the day is a capture day, do the following:
-    /*
-    if((any(i==sample_frq)).is_true()){
-      //run the estimate prev function 
-      //xx
-    }
-    */ 
-    
-    ///////////////////////////////////////////////////////////////
-    //assuming that the removal of mozzies are negligable, remove the block below:
-    /*
-     //erase the captured mozzies as well:
-     for(int k=0; k<current_mosquitoes.size();k++){
-     if((any(k==mozzie_ids)).is_true()){
-     //remove the dead mozzie:
-     current_mosquitoes.erase(current_mosquitoes.begin()+k); 
-     //  Rcpp::Rcout << "dead mozzie: " << k << std::endl;
-     }}
-     */
-    
     //if the mozzies are overwintering, increase the age:
     if(set_the_overwintering_period[i]==1){
     for(int a=0;a<ovewintering_mozzies.size();a++){
@@ -617,37 +500,10 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
       }
     }
     
-    /*
-    // kill .1% of the overwintering mozzies 
-    if(set_the_overwintering_period[i]==1){
-      for(int a=0;a<ovewintering_mozzies.size();a++){
-        NumericVector rx=Rcpp::runif(1,0,1);
-        if(rx[0]<=0.001){
-          ovewintering_mozzies[a]->death_moz();
-          //remove the mozzie from the overwintering mozzies
-          ovewintering_mozzies.erase(ovewintering_mozzies.begin()+a);
-          ++nDeaths; //if the mozzie is a full-grown overwintering mozzie, then add to the number of deaths 
-        }
-      }
-    }
-    
-    //kill 1% of the mozzie eggs as well during overwintering period 
-    if(set_the_overwintering_period[i]==1){
-      for(int a=0;a<egg_mozzies.size();a++){
-        NumericVector rx=Rcpp::runif(1,0,1);
-        if(rx[0]<=0.01){
-          egg_mozzies[a]->death_moz();
-          egg_mozzies.erase(egg_mozzies.begin()+a);
-        }
-    }
-    }
-    */
     
     //increase the age of the living mozzies and those not captured: 
     for(int m=0;m<current_mosquitoes.size();m++){
       current_mosquitoes[m]->increase_mozzie_age(); 
-      //  int mozzie_age=current_mosquitoes[m]->get_mozzie_age(); //to check
-      //Rcpp::Rcout << "Mozzie age: " << mozzie_age << std::endl;
     }
     
     
@@ -656,21 +512,13 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
     for(int a=0;a<current_mosquitoes.size();a++){
       nMozzieStates[0] +=current_mosquitoes[a]->check_moz_sus()*1; //daily prevalence 
       nMozzieStates[1] +=current_mosquitoes[a]->check_moz_inf()*1; //ditto 
-      //  nMozzieStates[2] +=current_mosquitoes[a]->check_moz_death()*1; //don't use this, because you are already removing them from the current state
     }
-    
-    //nMozzieStates[2] =Mosquito::DEATHS_COUNTER; //use this for cumulative sums. 
+  
     nMozzieStates[2]=  nDeaths;//daily deaths 
     nMozzieStates[3] =mozzie_births; //daily birthds 
     nMozzieStates[4]=new_adults;
     timeStateMozzies(i,_)=nMozzieStates;
     
-    
-    //  Rcpp::Rcout << "Number of infection mosquitoes: " <<   nMozzieStates[1] << std::endl;
-    //don't use the counters for susceptibles and for infectious mozzies, once they are captured, the counters aren't correct
-    //nMozzieStates[0]=Mosquito::SUSCEPTIBLE_COUNTER;
-    //nMozzieStates[1]=Mosquito::INFECTIOUS_COUNTER;
-    //nMozzieStates[2]=Mosquito::DEATHS_COUNTER;
     
     //include the current state to the mmatricses for hosts and mozzies 
     IntegerVector nHostStates(5);
@@ -735,15 +583,14 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
         if(ct_ch==1){
            mozzie_ct_dat=current_mosquitoes[m]->m22_get_current_viral_load(ct_bird_moz);
           
-         // mozzie_ct_dat={35,2};
         }else{
            mozzie_ct_dat=current_mosquitoes[m]->m33_get_current_viral_load(ct_bird_moz,prob_ct_model_change,i); 
-         // mozzie_ct_dat={35,3};
+  
         }
-      //  NumericVector mozzie_ct_dat=current_mosquitoes[m]->m2_get_current_viral_load(ct_bird_moz,prob_ct_model_change,i);
+
         mozzie_ct=mozzie_ct_dat[0];
         ct_type=mozzie_ct_dat[1];
-        //Rcpp::Rcout << "ct_type: " << ct_type << std::endl;
+       
       }
       mozzie_objects_i << current_mosquitoes[m]->get_mozzie_id() << "," <<
         current_mosquitoes[m]->get_moz_inf_state() << "," <<
@@ -777,27 +624,6 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
   mozzie_ct_params.close(); 
   host_ct_params.close(); 
  
-  /*
-  std::ofstream myfile;
-  myfile.open ("test/example.csv");
-  myfile << "a,b,c,\n";
-  myfile << timeStatehosts << endl;
-  myfile.close();
-  
-  myfile.open("ex2.csv");
-  myfile << timeStateMozzies << endl;
-  myfile.close();
-   */ 
-  //DataFrame daily_new_infections=DataFrame::create(Named("time")=time,
-  //  Named("incidence")=new_infs);
-  // end the time increment 
-  //return mozzy and host states 
-  //List outputs=List::create(timeStatehosts,timeStateMozzies,median_ct_moz_aegypti,median_ct_moz_pipiens,
-  //  median_ct_moz_quinquefasciatus,median_ct_moz_tarsalis);
- // List outputs=List::create(timeStatehosts,timeStateMozzies,pro_female_mozzies,
-                         //   median_ct_moz_pipiens,total_mozzies,mozzie_ct_params,
-                         //   all_cts_tsi,new_infs,death_ages,mozzie_ages);
-  
   
 }
 
