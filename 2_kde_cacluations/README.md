@@ -4,7 +4,7 @@
  **_2_kde_calculations_:**  
   **Run:**  
    a) **Open** _2_kde_calculations.Rproj_ R project.  
-   b) **Run** _kde_pre_calculations.R_ to calculate and store KDE approximations based on different pool sizes and number of positive samples in a pool.
+   b) **Run** _kde_pre_calculations.R_ to calculate and store KDE approximations based on different pool sizes and the number of positive samples in a pool.
    
 
    The helping data are in the synthetic_data folder, and the helping functions are in the functions folder. 
