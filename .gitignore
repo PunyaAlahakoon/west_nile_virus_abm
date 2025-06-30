@@ -3,8 +3,8 @@
 .RData
 .Ruserdata
 .DS_Store
-/abm_run/mozzie_outputs
-/abm_run/host_outputs
+/abm_run/mozzie_outputs/*
+/abm_run/host_outputs/*
 /1_abm_run/host_outputs/host_object_data/*
 /1_abm_run/mozzie_outputs/mozzie_object_data
 /1_abm_run/mozzie_outputs/params
