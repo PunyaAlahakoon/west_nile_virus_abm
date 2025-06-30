@@ -1,7 +1,7 @@
 
 
  
- ## This folder contains all the code required to run the ABM with an example. 
+ ## This folder contains the code required to run the ABM with an example. 
 
 
  **_1_abm_run_:**  
