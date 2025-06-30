@@ -10,7 +10,7 @@
   a) **Open** _abm_run.Rproj_ R project.    
   b) **Run** _required_r_package.R_ to install or load the packages required.  
   c) **Run** _run_abm.R_ to run the agent-based model.  
-    This script includes and an example based on the parameters used in the model. 
+    This script includes an example based on the parameters used in the model. 
 
 
 ### More details:  
