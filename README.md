@@ -12,13 +12,13 @@
   a) **Open** _abm_run.Rproj_ R project.    
   b) **Run** _required_r_package.R_ to install or load the packages required.  
   c) **Run** _run_abm.R_ to run the agent-based model.  
-    This script includes and an example based on the parameters used in the model. 
+    This script includes an example based on the parameters used in the model. 
 
    
 2. **_2_kde_calculations_:**  
   **Run:**  
    a) **Open** _2_kde_calculations.Rproj_ R project.  
-   b) **Run** _kde_pre_calculations.R_ to calculate and store KDE approximations based on different pool sizes and number of positive samples in a pool. 
+   b) **Run** _kde_pre_calculations.R_ to calculate and store KDE approximations based on different pool sizes and the number of positive samples in a pool. 
 
    
 3. **_3_figure_generation_:**  
