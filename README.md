@@ -6,7 +6,7 @@
 
 ### <ins>Folder structure</ins>
 
-1. **_1_abm_structure_:**  
+1. **_1_abm_run_:**  
   This folder contains the code for the agent-based model written in Rcpp.  
 **Run:**  
   a) **Open** _abm_run.Rproj_ R project.    
