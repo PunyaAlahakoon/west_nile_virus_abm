@@ -3,7 +3,7 @@
  
  ## This folder contains all the codes required to run the ABM with an example. 
 
-## Steps: 
+
  **_1_abm_structure_:**  
   This folder contains the code for the agent-based model written in Rcpp.  
 **Run:**  
