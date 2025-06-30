@@ -29,11 +29,11 @@
 
 #### Other folders:  
 1. **functions:** This folder contains the sinusoidal functions used for overwintering and other parameters in the ABM.  
-2. **mozzie_outputs:** This folder contains the synthetic data related to the mosquitoes that will be stored after running the ABM:   
+2. **mozzie_outputs:** This folder will store the synthetic data related to the mosquitoes after running the ABM:   
    a) **mozzie_object_data:** Stores the mosquito object characteristics at each time-step.  
    b) **params:** Stores the parameters of some of the mosquito objects' Ct model.  
    c) **states:** Store the prevalence, incidence, total population, number of susceptible, deaths, etc, of the mosquito population at each time-step.
-3. **host_outputs:** This folder contains the synthetic data related to the birds that will be stored after running the ABM:   
+3. **host_outputs:** This folder will store the synthetic data related to the birds after running the ABM:   
    a) **host_object_data:** Stores the bird object characteristics at each time-step.  
    b) **params:** Stores the parameters of some of the bird objects' Ct model.  
    c) **states:** Store the prevalence, incidence, total population, number of susceptible, deaths, etc, of the bird population at each time-step.  
