@@ -10,3 +10,11 @@
 /1_abm_run/host_outputs/states/*.csv
 /1_abm_run/host_outputs/params/*.csv
 /1_abm_run/host_outputs_with_decay_model
+/1_abm_run/host_outputs_with_decay_model_old
+/1_abm_run/mozie_outputs_wth_decay_model
+/1_abm_run/mozie_outputs_wth_decay_model_old/mozzie_object_data
+/2_kde_cacluations/kde_calcs_dynamic_static
+/3_figure_generation/pre_calculations/kde_calcs_dynamic_static
+3_figure_generation/pre_calculations/joint_kde_calc/joint_fkde_7.rds
+3_figure_generation/pre_calculations/pooled_cts/.Rapp.history
+3_figure_generation/testing.R

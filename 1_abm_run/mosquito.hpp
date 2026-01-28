@@ -82,7 +82,8 @@ public:
   static double chi_mean; //absolute difference between lod and peak ct
   static double t_r_mean; 
   static double t_0_mean; 
-  
+
+    
   static void set_viral_static_params(NumericVector viral_pop_params,
                                       NumericVector ind_sigmas,NumericMatrix betas);
 
@@ -128,11 +129,11 @@ public:
   //void viral_load_curve_moz(IntegerVector ages,NumericVector kinetic_pars,int times);
   void viral_load_curve_moz(int st_time,int times);
   double current_viral_load(int current_time,double host_current_ct, int method); 
-  NumericVector m22_get_current_viral_load(double bird_ct_bitten);
-  NumericVector m33_get_current_viral_load(double host_current_ct, double prob_events, int current_time); 
+  NumericVector m22_get_current_viral_load(int current_time,double bird_ct_bitten,double decay_rate);
+  NumericVector m33_get_current_viral_load(double host_current_ct, double prob_events, int current_time, double decay_rate); 
   
   //folllowing there functions are actually not being used at the moment. the above one is being used 
-  double m1_get_current_viral_load(int current_time);//ct model without considering the ct 
+  double m1_get_current_viral_load(int current_time,double decay_rate);//ct model without considering the ct 
   //values of the hosts 
   NumericVector m2_get_current_viral_load(double host_current_ct, double prob_events,int current_time);
 

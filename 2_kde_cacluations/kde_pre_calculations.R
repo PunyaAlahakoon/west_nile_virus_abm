@@ -1,7 +1,7 @@
 #this script will calculaet the kdes for the given pool sizes 
 #read the data saved from the abm, they are saved in teh synthetic data folder 
 source("functions/kde_approx.R")
-readRDS("synthetic_data/all_data.rds")
+all_data<-readRDS("synthetic_data/all_data.rds")
 
 ct_threshold=40
 
@@ -26,7 +26,9 @@ slope= -2.7
 viral_loads_vec=ct_to_vl(positive_ctss,intercept,slope)
 
 
-pool_sizes=c(1:50,100, 200,500)
+#pool_sizes=c(1:50,100, 200,500)
+
+pool_sizes=c(1:50)
 
 for (i in 1:length(pool_sizes_test)) {
   f_kde_i<-kde_approx(B=10000,x=pool_sizes[i],viral_loads=viral_loads_vec,intercept=36.9, slope= -2.7)

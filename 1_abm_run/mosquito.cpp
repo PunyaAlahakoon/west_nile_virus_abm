@@ -23,7 +23,7 @@ double Mosquito::ct_lod=40;
  double Mosquito::t_p_sigma_pop=1; 
  double Mosquito::t_0_mean_pop=0;
  double Mosquito::t_0_sigma_pop=1; 
- double Mosquito::t_r_mean_pop=log(8+5); //clearance time , log(8+peak). this is not really not being used 
+ double Mosquito::t_r_mean_pop=log(8+5); //clearance time , log(8+peak). this is not really  being used 
  double Mosquito::t_r_sigma_pop=1; 
 
 
@@ -385,7 +385,7 @@ void Mosquito::death_moz(){
  
  
  
- double Mosquito::m1_get_current_viral_load(int current_time){
+ double Mosquito::m1_get_current_viral_load(int current_time,double decay_rate){
   double c_t_current=ct_lod; 
  // double v_l_current=1e2; //limit of detection 
   //if the mozzie is not infected, then the ct_value=lod
@@ -398,28 +398,42 @@ if(m_state==Mosquito::mState::mInfected){
   double omega_p=t_p-t_0; 
   double omega_r=t_r-t_p; 
   
-  if(current_time>=t_p){
-    c_t_current=min_ct; 
- //   v_l_current= peak_vl; //peak viral load 
+  if((current_time>=t_0) && (current_time<=t_p)){
+    c_t_current=((-chi/omega_p)*(current_time)) +ct_lod+((chi/omega_p)*t_0);
+ //   v_l_cu rrent= peak_vl; //peak viral load 
     
   } else if(current_time<inf_start_time){
     c_t_current=ct_lod;
    // v_l_current=1e2; 
   }
   else{
-    c_t_current=((-chi/omega_p)*(current_time)) +ct_lod+((chi/omega_p)*t_0);
+   if(decay_rate==0){
+     c_t_current=min_ct;  
+   }else{
+    //if decay rate is non-zero, add decay part:
+    c_t_current=(decay_rate*current_time)+(min_ct-decay_rate*t_p); 
+   }
 
   }
 }
-
+                          
 //NumericVector dat={c_t_current,v_l_current};
 ct_current=c_t_current;
   return ct_current;
 }
 
  
- NumericVector Mosquito::m22_get_current_viral_load(double bird_ct_bitten){
-   double c_t_current=bird_ct_bitten; 
+ NumericVector Mosquito::m22_get_current_viral_load(int current_time,double bird_ct_bitten, double decay_rate){
+   double c_t_new=bird_ct_bitten; 
+   double c_t_current; 
+   if(decay_rate==0){
+     c_t_current=c_t_new; 
+   }else{
+  //calculate the ct value current 
+  c_t_current=(decay_rate*current_time)+c_t_new-(decay_rate*t_0); 
+     c_t_current=std::min(c_t_current,ct_lod); 
+   }
+   
   // c_t_current=35;
   // return c_t_current; 
    double ct_method= 2; 
@@ -427,7 +441,7 @@ ct_current=c_t_current;
  //  Rcpp::Rcout << "c_t_current: " << c_t_current << std::endl;
  }
  
- NumericVector Mosquito::m33_get_current_viral_load(double host_current_ct, double prob_events, int current_time){
+ NumericVector Mosquito::m33_get_current_viral_load(double host_current_ct, double prob_events, int current_time,double decay_rate){
    //generate a random number:
    double c_t_current; 
    double ct_method; 
@@ -441,8 +455,8 @@ ct_current=c_t_current;
      double omega_p=t_p-t_0; 
      double omega_r=t_r-t_p; 
      
-     if(current_time>=t_p){
-       c_t_current=min_ct; 
+     if((current_time>=t_0) && (current_time<=t_p)){
+       c_t_current=((-chi/omega_p)*(current_time)) +host_current_ct+((chi/omega_p)*t_0);
      } else if(current_time<inf_start_time){
        c_t_current=ct_lod;
        // v_l_current=1e2; 
@@ -450,7 +464,8 @@ ct_current=c_t_current;
        c_t_current=host_current_ct; 
      }
      else{
-       c_t_current=((-chi/omega_p)*(current_time)) +host_current_ct+((chi/omega_p)*t_0);
+       double c_t_c=(decay_rate*current_time)+(min_ct-(decay_rate*t_p)); 
+       c_t_current=std::min(c_t_c,ct_lod);
        //v_l_current=((peak_vl-1e2)/omega_p)*(current_time)+1e2-((peak_vl-1e2)/omega_p)*(t_0); 
        
      }

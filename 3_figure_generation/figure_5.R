@@ -45,7 +45,7 @@ for (i in 1:52) {
                        method="Brent",lower=0,upper=1)
     suppressMessages(
       confint1 <- tryCatch({
-        ci <- confint(fit)
+        ci <- bbmle::confint(fit)
         if(is.na(ci[1])) ci[1] <- 0
         if(is.na(ci[2])) ci[1] <- 1
         ci
@@ -58,7 +58,7 @@ for (i in 1:52) {
     
     # optim_prev<-optim(runif(1),fn=prev_likelihood_real,f_kde=f_kde,n_pools=b_pools,n_sample_size=sample_size_i,
     # observed_ct_vec=observed_ct_vec,neg_lik=TRUE,method = "Brent",lower=0,upper=1)$par
-    optim_prev_esti<-rbind(optim_prev_esti,data.frame("week"=i,"optim_prev"=coef(fit), "q1"=confint1[1],
+    optim_prev_esti<-rbind(optim_prev_esti,data.frame("week"=i,"optim_prev"=bbmle::coef(fit), "q1"=confint1[1],
                                                       "q2"=confint1[2]))
   }else{
     optim_prev_esti<-rbind(optim_prev_esti,data.frame("week"=i,"optim_prev"=NA,"q1"=NA,"q2"=NA))

@@ -25,6 +25,7 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
                       NumericVector seed_on,
                       bool seed_mozzies,
                       int sim_number, double egg_to_adult_days, 
+                      double decay_rate,
                       int mozzie_viral_dynamics_method,double prob_ct_model_change,
                       double viral_percent_from_birds,NumericVector set_the_overwintering_period,
                       NumericVector mozzie_owerwintering_prob,NumericVector active_period,
@@ -60,28 +61,28 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
   //create ofstream for file outputs 
   std::ofstream host_states;
   stringstream host_ss;
-  host_ss << "host_outputs/states/host_states_"  << sim_number << "_" << prob_ct_model_change << "_" << viral_percent_from_birds << ".csv";
+  host_ss << "host_outputs_with_decay_model/states/host_states_"  << sim_number << "_" << prob_ct_model_change << "_" << viral_percent_from_birds << "_" << decay_rate << ".csv";
   string file_hosts= host_ss.str();
   host_states.open (file_hosts);
   host_states<<"Susceptible,Infectious,Recovered,Deaths,Births,Total_pop,new_inf_hosts, \n"; 
 
   std::ofstream mozzie_states; 
   stringstream mozzie_ss;
-  mozzie_ss << "mozzie_outputs/states/mozzie_states_"  << sim_number <<"_" << prob_ct_model_change << "_" << viral_percent_from_birds << ".csv";
+  mozzie_ss << "mozie_outputs_wth_decay_model/states/mozzie_states_"  << sim_number <<"_" << prob_ct_model_change << "_" << viral_percent_from_birds << "_" << decay_rate<< ".csv";
   string file_mozzies=mozzie_ss.str();
   mozzie_states.open(file_mozzies);
   mozzie_states<<"Susceptible, Infectious,Deaths, Births, new_adults,Total_pop,new_inf_mozzies,\n" ; 
   
   std::ofstream mozzie_ct_params; 
   stringstream mozzie_pars; 
-  mozzie_pars << "mozzie_outputs/params/mozzie_ct_params_"  << sim_number <<"_" << prob_ct_model_change << "_" << viral_percent_from_birds << ".csv";
+  mozzie_pars << "mozie_outputs_wth_decay_model/params/mozzie_ct_params_"  << sim_number <<"_" << prob_ct_model_change << "_" << viral_percent_from_birds << "_" << decay_rate << ".csv";
   string file_mozzie_pars=mozzie_pars.str(); 
   mozzie_ct_params.open(file_mozzie_pars);
   mozzie_ct_params<<"mozzie_id,current_time,inf_start_time,t_0,t_p,chi,t_r,\n"; 
   
   std::ofstream host_ct_params; 
   stringstream host_pars;
-  host_pars << "host_outputs/params/host_ct_params_" << sim_number <<"_" << prob_ct_model_change << "_" << viral_percent_from_birds << ".csv";
+  host_pars << "host_outputs_with_decay_model/params/host_ct_params_" << sim_number <<"_" << prob_ct_model_change << "_" << viral_percent_from_birds << "_" << decay_rate << ".csv";
   string file_host_pars=host_pars.str();
   host_ct_params.open(file_host_pars); 
   host_ct_params<<"host_id,current_time,inf_start_time,t_0,t_p,chi,t_r,\n";
@@ -165,7 +166,7 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
   //open a file to store mozzie objects and store the data. ditto for hosts 
   std::ofstream mozzie_objects_i; 
   stringstream ss;
-  ss << "mozzie_outputs/mozzie_object_data/mozzie_objects_" << 0 << "_"<< sim_number <<"_" << prob_ct_model_change << "_" << viral_percent_from_birds << ".csv";
+  ss << "mozie_outputs_wth_decay_model/mozzie_object_data/mozzie_objects_" << 0 << "_"<< sim_number <<"_" << prob_ct_model_change << "_" << viral_percent_from_birds << "_" << decay_rate << ".csv";
   string filename= ss.str();
   mozzie_objects_i.open(filename); 
   //mozzie_objects_i.open("mozzie_outputs/mozzie_object_data/mozzie_states.csv"); 
@@ -179,17 +180,17 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
     int ct_type=0; 
     //get the current ct value of the mozzie based on the method:
     if(mozzie_viral_dynamics_method==1){
-      mozzie_ct=current_mosquitoes[m]->m1_get_current_viral_load(0);
+      mozzie_ct=current_mosquitoes[m]->m1_get_current_viral_load(0,decay_rate);
       ct_type=1;
     }else{
       int ct_ch =current_mosquitoes[m]->get_ct_model_change(); 
       //Rcpp::Rcout << "ct_bird_return: " << ct_ch << std::endl;
       NumericVector mozzie_ct_dat; 
       if(ct_ch==1){
-        mozzie_ct_dat=current_mosquitoes[m]->m22_get_current_viral_load(ct_bird_moz);
+        mozzie_ct_dat=current_mosquitoes[m]->m22_get_current_viral_load(0,ct_bird_moz,decay_rate);
         // mozzie_ct_dat={35,2};
       }else{
-        mozzie_ct_dat=current_mosquitoes[m]->m33_get_current_viral_load(ct_bird_moz,prob_ct_model_change,0); 
+        mozzie_ct_dat=current_mosquitoes[m]->m33_get_current_viral_load(ct_bird_moz,prob_ct_model_change,0,decay_rate); 
         // mozzie_ct_dat={35,3};
       }
      // NumericVector mozzie_ct_dat=current_mosquitoes[m]->m2_get_current_viral_load(ct_bird_moz,prob_ct_model_change,0);
@@ -211,7 +212,7 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
   
   std::ofstream host_objects_i; 
   stringstream hh; 
-  hh << "host_outputs/host_object_data/host_objects_"  << 0 << "_"<< sim_number <<"_" << prob_ct_model_change << "_" << viral_percent_from_birds << ".csv";
+  hh << "host_outputs_with_decay_model/host_object_data/host_objects_"  << 0 << "_"<< sim_number <<"_" << prob_ct_model_change << "_" << viral_percent_from_birds << "_" << decay_rate << ".csv";
   string file=hh.str(); 
   host_objects_i.open(file); 
   host_objects_i << "id,inf_state,current_time,infected_time,ct_value,sim_number,\n";
@@ -231,7 +232,7 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
     //at each time point, open a file for the mozzie objects:
     std::ofstream mozzie_objects_i; 
     stringstream ss;
-    ss << "mozzie_outputs/mozzie_object_data/mozzie_objects_" << i << "_"<< sim_number <<"_" << prob_ct_model_change << "_" << viral_percent_from_birds << ".csv";
+    ss << "mozie_outputs_wth_decay_model/mozzie_object_data/mozzie_objects_" << i << "_"<< sim_number <<"_" << prob_ct_model_change << "_" << viral_percent_from_birds << "_" << decay_rate << ".csv";
     string filename= ss.str();
     mozzie_objects_i.open(filename); 
     //mozzie_objects_i.open("mozzie_outputs/mozzie_object_data/mozzie_states.csv"); 
@@ -240,7 +241,7 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
     //ditto for hosts:
     std::ofstream host_objects_i; 
     stringstream hh; 
-    hh << "host_outputs/host_object_data/host_objects_"  << i << "_"<< sim_number <<"_" << prob_ct_model_change << "_" << viral_percent_from_birds << ".csv";
+    hh << "host_outputs_with_decay_model/host_object_data/host_objects_"  << i << "_"<< sim_number <<"_" << prob_ct_model_change << "_" << viral_percent_from_birds << "_" << decay_rate << ".csv";
     string file=hh.str(); 
     host_objects_i.open(file); 
     host_objects_i << "id,inf_state,current_time,infected_time,ct_value,sim_number,\n";
@@ -576,15 +577,15 @@ void run_mozzie_model(int time, int nhosts, int nMozzies, NumericVector daily_pr
       //get the current ct value of the mozzie based on the method:
       if(mozzie_viral_dynamics_method==1){
         ct_type=1;
-        mozzie_ct=current_mosquitoes[m]->m1_get_current_viral_load(i);
+        mozzie_ct=current_mosquitoes[m]->m1_get_current_viral_load(i,decay_rate);
       }else{
         int ct_ch =current_mosquitoes[m]->get_ct_model_change(); 
         NumericVector mozzie_ct_dat; 
         if(ct_ch==1){
-           mozzie_ct_dat=current_mosquitoes[m]->m22_get_current_viral_load(ct_bird_moz);
+           mozzie_ct_dat=current_mosquitoes[m]->m22_get_current_viral_load(i,ct_bird_moz,decay_rate);
           
         }else{
-           mozzie_ct_dat=current_mosquitoes[m]->m33_get_current_viral_load(ct_bird_moz,prob_ct_model_change,i); 
+           mozzie_ct_dat=current_mosquitoes[m]->m33_get_current_viral_load(ct_bird_moz,prob_ct_model_change,i,decay_rate); 
   
         }
 

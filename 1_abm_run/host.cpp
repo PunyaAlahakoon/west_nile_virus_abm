@@ -158,7 +158,7 @@ double Host::get_current_ct_host(int current_time){
       if(current_time==t_p_host){
       ct_current=min_ct; 
     } else if((current_time>=t_0_host) && (current_time<t_p_host)){
-      ct_current=((-chi_host/omega_p_host)*(current_time)) +ct_lod+((chi_host/omega_p_host)*t_0_host);//viral load increasing
+      ct_current=((-chi_host/omega_p_host)*(current_time)) +ct_lod+(( chi_host/omega_p_host)*t_0_host);//viral load increasing
     } else if((current_time>t_p_host) && (current_time<=t_r_host)){
       ct_current=((chi_host/omega_r_host)*(current_time))+min_ct-((chi_host/omega_r_host)*t_p_host); 
     }
