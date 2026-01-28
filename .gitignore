@@ -9,3 +9,4 @@
 /1_abm_run/mozzie_outputs/states/*.csv
 /1_abm_run/host_outputs/states/*.csv
 /1_abm_run/host_outputs/params/*.csv
+/1_abm_run/host_outputs_with_decay_model
