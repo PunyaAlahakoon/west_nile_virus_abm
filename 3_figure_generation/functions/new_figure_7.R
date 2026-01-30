@@ -430,8 +430,8 @@ all_cdc<-rbind(pv_cdc_neb,pv_cdc_col)
 
 all_esti<-rbind(prev_esti_by_ys_neb,prev_esti_by_ys_col)
 
-all_esti_unique <- rbind(unique(all_esti),all_esti[all_esti$yer=="2024" & all_esti$state=="Colorado",])
-all_esti_unique=all_esti_unique[-1611,]
+all_esti_unique <- unique(all_esti)
+#all_esti_unique=all_esti_unique[-1611,]
 
 
 library(dplyr)
@@ -447,14 +447,16 @@ combined <- all_cdc %>%
             by = c("yer" = "yer", "week" = "week", "state" = "state"),
             suffix = c("_cdc", "_esti"))
 
-pl_all_esti<-combined[,c(2:3,7, 4, 11,1)]
-colnames(pl_all_esti)<-c("yer","week", "overall", "cdc", "dynamic",'state')
+#saveRDS(combined,"combined.RDS")
+
+pl_all_esti<-combined[,c(2:3, 4,7, 11,1)]
+colnames(pl_all_esti)<-c("yer","week", "cdc", "overall", "dynamic",'state')
 m_pl_all_esti<-melt(pl_all_esti,id=c("yer","week",'state'))
 
-all_esti_q1s<-combined[,c("yer","week","q1_esti","q1_cdc","dynamic_q1","state")]
-colnames(all_esti_q1s)<-c("yer","week", "overall","cdc", "dynamic",'state')
-all_esti_q2s<-combined[,c("yer","week","q2_esti","q2_cdc","dynamic_q2","state")]
-colnames(all_esti_q2s)<-c("yer","week", "overall","cdc", "dynamic",'state')
+all_esti_q1s<-combined[,c("yer","week","q1_cdc","q1_esti","dynamic_q1","state")]
+colnames(all_esti_q1s)<-c("yer","week","cdc", "overall", "dynamic",'state')
+all_esti_q2s<-combined[,c("yer","week","q2_cdc","q2_esti","dynamic_q2","state")]
+colnames(all_esti_q2s)<-c("yer","week","cdc", "overall", "dynamic",'state')
 
 m_all_esti_q1s<-melt(all_esti_q1s,id=c("yer","week",'state'))
 names(m_all_esti_q1s)[names(m_all_esti_q1s) == "value"] <- "q1"
@@ -462,6 +464,120 @@ names(m_all_esti_q1s)[names(m_all_esti_q1s) == "value"] <- "q1"
 m_all_esti_q2s<-melt(all_esti_q2s,id=c("yer","week",'state'))
 names(m_all_esti_q2s)[names(m_all_esti_q2s) == "value"] <- "q2"
 m_all_esti_qs<-cbind(m_all_esti_q1s,"q2"=m_all_esti_q2s$q2)
+
+
+est_true_prev<-subset(m_pl_all_esti,state=="Nebraska" & !variable %in% c("overall","dynamic"))
+levels(est_true_prev$variable)<-droplevels(est_true_prev$variable)
+levels(est_true_prev$variable)<-"dynamic"
+est_true_prev_2<-est_true_prev
+est_true_prev_2$variable<-rep("overall")
+est_true_prev<-rbind(est_true_prev,est_true_prev_2)
+  
+p1<-ggplot(data=subset(m_pl_all_esti,state=="Nebraska"))+
+  geom_ribbon(data=subset(m_all_esti_qs,state=="Nebraska"),
+              aes(x=week,ymin = q1,ymax = q2,fill =variable ),alpha=0.6)+
+  geom_line(aes(x=week,y=value,color=variable))+
+  scale_fill_manual(values = c("#a86463","#5d861f","#ad7f00"),
+                    labels=c("Binarised data-based","Pooled Ct value-based ",
+                             "Pooled Ct value-based \n (Productive infection)"))+
+  scale_color_manual(values = c("#971a18","#385905","#674D06") )+
+  geom_line(data=est_true_prev,aes(x=week,y=value),color="#971a18",linetype="dashed")+
+  coord_cartesian(ylim=c(0,0.04))+
+  xlim(20,40)+
+  ylab(NULL)+
+  # 
+  facet_grid(
+    rows = vars(yer),
+    cols = vars(variable),
+    switch = "y"
+  ) +
+  
+  default_theme+
+  ggtitle("(A) Nebraska")+
+  theme(
+    strip.background = element_blank(),
+    
+    # Remove variable labels
+    strip.text.x = element_blank(),
+    
+    # ✔ Keep year labels (shown on right)
+    strip.placement = "outside",
+    strip.text.y.right = element_text(size = 12),
+    
+    legend.position = "bottom"
+  ) +
+  guides(color = "none")
+
+p1
+
+est_true_prev<-subset(m_pl_all_esti,state=="Colorado" & !variable %in% c("overall","dynamic") & yer!=2024 )
+levels(est_true_prev$variable)<-droplevels(est_true_prev$variable)
+levels(est_true_prev$variable)<-"dynamic"
+est_true_prev_2<-est_true_prev
+est_true_prev_2$variable<-rep("overall")
+est_true_prev<-rbind(est_true_prev,est_true_prev_2)
+
+p2 <- ggplot(data=subset(m_pl_all_esti, state=="Colorado" & yer != 2024)) +
+  geom_ribbon(
+    data = subset(m_all_esti_qs, state=="Colorado" & yer != 2024),
+    aes(x = week, ymin = q1, ymax = q2, fill = variable),
+    alpha = 0.7
+  ) +
+  geom_line(aes(x=week,y=value,color=variable))+
+  scale_fill_manual(values = c("#a86463","#5d861f","#ad7f00"),
+                    labels=c("Binarised data-based","Pooled Ct value-based ",
+                             "Pooled Ct value-based \n (Productive infection)"))+
+  scale_color_manual(values = c("#971a18","#385905","#674D06") )+
+  geom_line(data=est_true_prev,aes(x=week,y=value),color="#971a18",linetype="dashed")+
+  geom_line(
+    data = est_true_prev,
+    aes(x = week, y = value),
+    color = "#971a18",
+    linetype = "dashed"
+  ) +
+  coord_cartesian(ylim = c(0,0.02)) +
+  xlim(20,40) +
+  ylab(NULL)+
+  # 
+  facet_grid(
+    rows = vars(yer),
+    cols = vars(variable),
+    switch = "y"
+  ) +
+  
+  default_theme +
+  ggtitle("(A) Colorado") +
+  theme(
+    strip.background = element_blank(),
+    
+    # Remove variable labels
+    strip.text.x = element_blank(),
+    
+    # ✔ Keep year labels (shown on right)
+    strip.placement = "outside",
+    strip.text.y.right = element_text(size = 12),
+    
+    legend.position = "bottom"
+  ) +
+  guides(color = "none")
+
+p2
+
+fig <- ggarrange(
+  p1 + coord_cartesian(ylim=c(0, 0.04)),
+  p2 + coord_cartesian(ylim = c(0, 0.02)),
+  nrow = 2,
+  align = "v",
+  common.legend = T,
+  legend = "bottom",
+  heights = c(2, 1.5)
+)
+
+annotate_figure(fig, left = text_grob("Estimated prevalence", rot = 90,size=14))
+
+#ggarrange(p1,p2,nrow = 2)
+
+ggsave("figures/figure_7_v2.png",last_plot(),height = 11,width = 12)
 
 
 
@@ -512,67 +628,67 @@ ggarrange(p1,p2,nrow = 2)
 
 ggsave("figures/figure_7_v2.png",last_plot(),height = 14,width = 14)
 
-
-p0<-ggplot(data=subset(prev_esti_by_ys_neb),aes(x=week,y=optim_p_dynamic))+
-  geom_ribbon(aes(x=week,ymin=dynamic_q1,ymax=dynamic_q2,fill = state),alpha=1)+
-  geom_line()+
-  facet_wrap(~as.factor(yer),ncol=3)+
-  #  scale_fill_manual(values = c("#a86463","#ad7f00"),
-  #       labels=c("Binarised","Pooled Ct values"))+
-  # xlim(20,45)+
-  ylim(0,0.03)+
- # scale_y_log10() +  
-  ylab("Estimated productive \n infection prevalence")+
-  xlab("Week")+
-  scale_color_manual(values  = wes_palette("AsteroidCity1", 3, type = "continuous"))+
-  default_theme +
-  theme(legend.position = "none")+
- ggtitle("(A) Nebraska")
-p0
-
-
-# p0<-p0 +
-#   scale_y_continuous(
-#     trans = pseudo_log_trans(base = 10),   # linear near 0, log-like further up
-#     breaks = c(0, 0.001, 0.01, 0.03, 0.1),
-#     labels = c("0", "0.001", "0.01", "0.03", "0.1"),
-#     limits = c(0, 0.1),
-#     oob = scales::squish
-#   ) +
-#   theme(legend.position = "none")
-
-
-
-
-p00<-ggplot(data=subset(prev_esti_by_ys_col,yer!="2024"),aes(x=week,y=optim_p_dynamic))+
-  geom_ribbon(aes(x=week,ymin=dynamic_q1,ymax=dynamic_q2,fill = state),alpha=1)+
-  geom_line()+
-  facet_wrap(~as.factor(yer),ncol=3)+
-  #  scale_fill_manual(values = c("#a86463","#ad7f00"),
-  #       labels=c("Binarised","Pooled Ct values"))+
-  # xlim(20,45)+
-  ylim(0,0.03)+
-  # scale_y_log10() +  
-  ylab("Estimated productive \n infection prevalence")+
-  xlab("Week")+
-  scale_color_manual(values  = wes_palette("AsteroidCity1", 3, type = "continuous"))+
-  default_theme +
-  theme(legend.position = "none")+
-ggtitle("(B) Colorado")
-p00
-
-p0  <- p0  + theme(axis.title.y = element_blank())
-p00 <- p00 + theme(axis.title.y = element_blank())
-
-library(ggpubr)
-
-ggarrange(p0, p00, nrow = 2) %>%
-  annotate_figure(
-    left = text_grob("Estimated productive  infection prevalence", rot = 90,size=14)
-  )
-
-
-
-
-ggsave("figures/figure_7_supplement.png",last_plot(),height = 6,width = 10)
+# 
+# p0<-ggplot(data=subset(prev_esti_by_ys_neb),aes(x=week,y=optim_p_dynamic))+
+#   geom_ribbon(aes(x=week,ymin=dynamic_q1,ymax=dynamic_q2,fill = state),alpha=1)+
+#   geom_line()+
+#   facet_wrap(~as.factor(yer),ncol=3)+
+#   #  scale_fill_manual(values = c("#a86463","#ad7f00"),
+#   #       labels=c("Binarised","Pooled Ct values"))+
+#   # xlim(20,45)+
+#   ylim(0,0.03)+
+#  # scale_y_log10() +  
+#   ylab("Estimated productive \n infection prevalence")+
+#   xlab("Week")+
+#   scale_color_manual(values  = wes_palette("AsteroidCity1", 3, type = "continuous"))+
+#   default_theme +
+#   theme(legend.position = "none")+
+#  ggtitle("(A) Nebraska")
+# p0
+# 
+# 
+# # p0<-p0 +
+# #   scale_y_continuous(
+# #     trans = pseudo_log_trans(base = 10),   # linear near 0, log-like further up
+# #     breaks = c(0, 0.001, 0.01, 0.03, 0.1),
+# #     labels = c("0", "0.001", "0.01", "0.03", "0.1"),
+# #     limits = c(0, 0.1),
+# #     oob = scales::squish
+# #   ) +
+# #   theme(legend.position = "none")
+# 
+# 
+# 
+# 
+# p00<-ggplot(data=subset(prev_esti_by_ys_col,yer!="2024"),aes(x=week,y=optim_p_dynamic))+
+#   geom_ribbon(aes(x=week,ymin=dynamic_q1,ymax=dynamic_q2,fill = state),alpha=1)+
+#   geom_line()+
+#   facet_wrap(~as.factor(yer),ncol=3)+
+#   #  scale_fill_manual(values = c("#a86463","#ad7f00"),
+#   #       labels=c("Binarised","Pooled Ct values"))+
+#   # xlim(20,45)+
+#   ylim(0,0.03)+
+#   # scale_y_log10() +  
+#   ylab("Estimated productive \n infection prevalence")+
+#   xlab("Week")+
+#   scale_color_manual(values  = wes_palette("AsteroidCity1", 3, type = "continuous"))+
+#   default_theme +
+#   theme(legend.position = "none")+
+# ggtitle("(B) Colorado")
+# p00
+# 
+# p0  <- p0  + theme(axis.title.y = element_blank())
+# p00 <- p00 + theme(axis.title.y = element_blank())
+# 
+# library(ggpubr)
+# 
+# ggarrange(p0, p00, nrow = 2) %>%
+#   annotate_figure(
+#     left = text_grob("Estimated productive  infection prevalence", rot = 90,size=14)
+#   )
+# 
+# 
+# 
+# 
+# ggsave("figures/figure_7_supplement.png",last_plot(),height = 6,width = 10)
 

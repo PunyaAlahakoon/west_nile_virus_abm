@@ -539,7 +539,7 @@ p2
 
 ###use optim_prev_esti_5.rds to geretae figure 3 
 optim_prev_esti_2<-as.data.frame(readRDS("optim_prev_esti_5.rds"))
-mm<-1440
+mm<-1870
 optim_prev_esti_2$true_static_p<-as.vector(p_combi[1:mm,2][[1]])
 optim_prev_esti_2$true_dynamic_p<-as.vector(p_combi[1:mm,3][[1]])
 optim_prev_esti_2$true_dynamic_prop<-optim_prev_esti_2$true_dynamic_p/(optim_prev_esti_2$true_static_p+optim_prev_esti_2$true_dynamic_p)

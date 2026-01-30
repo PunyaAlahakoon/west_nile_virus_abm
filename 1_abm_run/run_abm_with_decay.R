@@ -88,7 +88,7 @@ vira_per_ch<-1 # probability of the amount of virus transferred to the mozzie fr
 # medium_decay_rate<-0.5
 # low_decay_rate<-0.1
 # decay_rates<-c(0,low_decay_rate,medium_decay_rate,high_decay_rate)
-decay_rates<-c(0,0.00001,0.001,0.01,0.05,0.1,0.5)
+decay_rates<-c(0,0.00001,0.001,0.01,0.05,0.1,0.5,0.9)
 grds<-expand.grid(change_prob_model,vira_per_ch,decay_rates)
 
 n_sims<-nrow(grds)#number of sims to run 

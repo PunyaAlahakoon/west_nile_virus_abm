@@ -18,3 +18,6 @@
 3_figure_generation/pre_calculations/joint_kde_calc/joint_fkde_7.rds
 3_figure_generation/pre_calculations/pooled_cts/.Rapp.history
 3_figure_generation/testing.R
+1_abm_run/figures/figure_decay_rates.png
+/1_abm_run/figures
+3_figure_generation/pre_calculations/joint_kde_calc.zip
