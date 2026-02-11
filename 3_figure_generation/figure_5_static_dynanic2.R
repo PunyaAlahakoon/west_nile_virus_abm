@@ -441,3 +441,9 @@ p_B
 
 
 ggsave("figures/figure_5_static_dynamic.png",last_plot(),height = 10,width = 20)
+
+
+
+
+###cpmparison of the two methods; 
+
