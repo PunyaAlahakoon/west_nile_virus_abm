@@ -20,8 +20,8 @@ all_f_kde_joint=lapply(1:50,function(x) readRDS(file = paste0("pre_calculations/
 #generate a known prevlanace:
 #take pool size to be 50 
 pool_sizes=50 
-n_pools<-c(10,30,50,100)
-# n_pools<-5
+#n_pools<-c(10,30,50,100)
+ n_pools<-100
 
 # #get the proprtion sample 
 # #to have re
