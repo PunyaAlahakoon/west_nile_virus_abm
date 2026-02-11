@@ -15,7 +15,9 @@ theme=theme_minimal(15)+
   theme(panel.grid.major.y = element_line(color = "grey",
                                           linewidth = 0.5,
                                           linetype = "dotted"))+
-  theme(legend.title=element_blank(),legend.background = element_blank()) +
+  theme(
+    # legend.title=element_blank(),
+        legend.background = element_blank()) +
   theme(plot.title = element_text(hjust = 0.5))
 
 return(theme)

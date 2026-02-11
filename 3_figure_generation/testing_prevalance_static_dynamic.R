@@ -444,11 +444,11 @@ saveRDS(optim_prev_esti, "optim_prev_esti_5.rds")
 
 
 #use optim_prev_esti_2.rds to generate figures 1 and 2
-optim_prev_esti<-readRDS("optim_prev_esti_2.rds")
+optim_prev_esti<-readRDS("optim_prev_estims.rds")
 
 
-optim_prev_esti$true_static_p<-p_combi[,2]
-optim_prev_esti$true_dynamic_p<-p_combi[,3]
+optim_prev_esti$true_static_p<-as.vector(p_combi[,2])
+optim_prev_esti$true_dynamic_p<-as.vector(p_combi[,3])
 optim_prev_esti$true_dynamic_prop<-optim_prev_esti$true_dynamic_p/(optim_prev_esti$true_static_p+optim_prev_esti$true_dynamic_p)
 optim_prev_esti$estimated_dynamic_prop<-optim_prev_esti$optim_p_dynamic/(optim_prev_esti$optim_p_dynamic+optim_prev_esti$optim_p_static)
 optim_prev_esti$propr_error_dynamic<-optim_prev_esti$true_dynamic_prop-optim_prev_esti$estimated_dynamic_prop
@@ -538,22 +538,22 @@ p2
 
 
 ###use optim_prev_esti_5.rds to geretae figure 3 
-optim_prev_esti_2<-as.data.frame(readRDS("optim_prev_esti_5.rds"))
-mm<-1870
-optim_prev_esti_2$true_static_p<-as.vector(p_combi[1:mm,2][[1]])
-optim_prev_esti_2$true_dynamic_p<-as.vector(p_combi[1:mm,3][[1]])
+optim_prev_esti_2<-as.data.frame(readRDS("optim_prev_estims.rds"))
+
+optim_prev_esti_2$true_static_p<-as.vector(p_combi[,2][[1]])
+optim_prev_esti_2$true_dynamic_p<-as.vector(p_combi[,3][[1]])
 optim_prev_esti_2$true_dynamic_prop<-optim_prev_esti_2$true_dynamic_p/(optim_prev_esti_2$true_static_p+optim_prev_esti_2$true_dynamic_p)
 optim_prev_esti_2$estimated_dynamic_prop<-optim_prev_esti_2$optim_p_dynamic/(optim_prev_esti_2$optim_p_dynamic+optim_prev_esti_2$optim_p_static)
 optim_prev_esti_2$propr_error_dynamic<-optim_prev_esti_2$true_dynamic_prop-optim_prev_esti_2$estimated_dynamic_prop
 
-optim_prev_esti_2$n_pools<-as.vector(p_combi[1:mm,5][[1]])
-optim_prev_esti_2$pool_size<-as.vector(p_combi[1:mm,4][[1]])
+optim_prev_esti_2$n_pools<-as.vector(p_combi[,5][[1]])
+optim_prev_esti_2$pool_size<-as.vector(p_combi[,4][[1]])
 
 
 lvs=paste0("Pool size = ",pool_sizes)
 optim_prev_esti_2$pool_size=as.factor(optim_prev_esti_2$pool_size)
 levels(optim_prev_esti_2$pool_size)=lvs
-
+ 
 lv2=paste0("Prevalence = ",p_dynamic)
 optim_prev_esti_2$true_Prevalence=as.factor(optim_prev_esti_2$true_dynamic_p)
 levels(optim_prev_esti_2$true_Prevalence)=lv2
@@ -564,7 +564,7 @@ levels(optim_prev_esti_2$true_Prevalence)=lv2
 
 new_dat<-subset(optim_prev_esti_2, pool_size == "Pool size = 50")
 
-levs <- round(as.numeric(as.character(new_dat$true_dynamic_prop)), 2)
+levs <- round(as.numeric(as.character(new_dat$true_dynamic_prop)), 5)
 
 new_dat$true_dynamic_prop<-as.factor(new_dat$true_dynamic_prop)
 levels(new_dat$true_dynamic_prop)<-levs

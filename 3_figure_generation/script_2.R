@@ -6,8 +6,8 @@ library(tidyr)
 library(future)
 library(furrr)
 
-system.time({
-# ----- helper functions used later -----
+# system.time({
+# # ----- helper functions used later -----
 source("~/Documents/GitHub/west_nile_virus_abm/3_figure_generation/functions/helper_function_to_test_prev.R")
 
 #generate random observed Ct vectors 
@@ -23,20 +23,33 @@ pool_sizes=50
 n_pools<-c(10,30,50,100)
 # n_pools<-5
 
-#get the proprtion sample 
-#to have re
-p_static=c(0.001,0.01,.1)
-p_dynamic=c(0.001,0.01,.1)
+# #get the proprtion sample 
+# #to have re
+# p_static=c(0.001,0.01,.1)
+# p_dynamic=c(0.001,0.01,.1)
 
 
-grid <- expand.grid(p_static, p_dynamic, pool_sizes, n_pools)
-p_combi <- crossing(rep = 1:100, grid)
-p_combi<-p_combi[1:30,]
+p_dynamic <- c(0.001, 0.01, 0.1)
+prop      <- c(0.2, 0.4, 0.6, 0.8, 0.9) #proportion for dynamic
+
+
+# px_grid<-expand.grid(p_dynamic,prop)
+# 
+# p_static=(px_grid[,1]/px_grid[,2])-px_grid[,1]
+
+grids <- expand.grid(p_dynamic,prop, pool_sizes, n_pools)
+grids$static<-(grids$Var1/grids$Var2)-grids$Var1
+#grid <- expand.grid(p_static,px_grid[,1], pool_sizes, n_pools)
+
+grid<-data.frame(grids$static,grids$Var1,grids$Var3,grids$Var4)
+# grid <- expand.grid(p_static, p_dynamic, pool_sizes, n_pools)
+p_combi <- crossing(replicate = 1:100, grid)
+ #p_combi<-p_combi[1:10,]
 # ----- tidy up p_combi column names (use column positions because p_combi was made with crossing/expand.grid) -----
 # expected column order: rep, p_static, p_dynamic, pool_size, n_pools
 p_combi_tidy <- p_combi %>%
   transmute(
-    rep      = .[[1]],
+    repn      = replicate,
     p_static = as.numeric(.[[2]]),
     p_dynamic= as.numeric(.[[3]]),
     pool_size= as.numeric(.[[4]]),
@@ -89,7 +102,6 @@ viral_loads_vec_dynamic=ct_to_vl(positive_ctss_dynamic,intercept,slope)
 
 
 
-
 # helper functions & objects assumed in scope:
 # source(".../helper_function_to_test_prev.R")
 # ct_vec_obs(), run_one_fit(), make_pd(), is_pd_chol(), etc.
@@ -108,7 +120,7 @@ furrr_opts <- furrr::furrr_options(seed = seed_val)
 # Using future_pmap so RNG inside ct_vec_obs is reproducible and parallelised
 all_pools <- future_pmap(
   p_combi_tidy,
-  .f = function(rep, p_static, p_dynamic, pool_size, n_pools) {
+  .f = function(repn, p_static, p_dynamic, pool_size, n_pools) {
     prev_vec <- c(p_static, p_dynamic)
     ct_vec_obs(prev = prev_vec,
                pool_sizes = pool_size,
@@ -156,6 +168,6 @@ optim_prev_esti <- dplyr::bind_rows(optim_prev_esti_list) %>%
     p_combi_tidy %>% dplyr::select(p_static_true = p_static, p_dynamic_true = p_dynamic)
   )
 
-})
+# })
 
-#saveRDS(optim_prev_esti, "optim_prev_estims.rds")
+saveRDS(optim_prev_esti, "optim_prev_estims_2.rds")

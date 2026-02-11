@@ -449,6 +449,8 @@ combined <- all_cdc %>%
 
 #saveRDS(combined,"combined.RDS")
 
+combined <- readRDS("combined.RDS")
+
 pl_all_esti<-combined[,c(2:3, 4,7, 11,1)]
 colnames(pl_all_esti)<-c("yer","week", "cdc", "overall", "dynamic",'state')
 m_pl_all_esti<-melt(pl_all_esti,id=c("yer","week",'state'))
@@ -581,6 +583,12 @@ ggsave("figures/figure_7_v2.png",last_plot(),height = 11,width = 12)
 
 
 
+peaks <- combined %>%
+  group_by(state, yer) %>%
+  slice_max(order_by = optim_p_dynamic, n = 1, with_ties = FALSE) 
+peaks
+
+
 p1<-ggplot(data=subset(m_pl_all_esti,state=="Nebraska"))+
   geom_ribbon(data=subset(m_all_esti_qs,state=="Nebraska"),
               aes(x=week,ymin = q1,ymax = q2,fill =variable ))+
@@ -628,67 +636,5 @@ ggarrange(p1,p2,nrow = 2)
 
 ggsave("figures/figure_7_v2.png",last_plot(),height = 14,width = 14)
 
-# 
-# p0<-ggplot(data=subset(prev_esti_by_ys_neb),aes(x=week,y=optim_p_dynamic))+
-#   geom_ribbon(aes(x=week,ymin=dynamic_q1,ymax=dynamic_q2,fill = state),alpha=1)+
-#   geom_line()+
-#   facet_wrap(~as.factor(yer),ncol=3)+
-#   #  scale_fill_manual(values = c("#a86463","#ad7f00"),
-#   #       labels=c("Binarised","Pooled Ct values"))+
-#   # xlim(20,45)+
-#   ylim(0,0.03)+
-#  # scale_y_log10() +  
-#   ylab("Estimated productive \n infection prevalence")+
-#   xlab("Week")+
-#   scale_color_manual(values  = wes_palette("AsteroidCity1", 3, type = "continuous"))+
-#   default_theme +
-#   theme(legend.position = "none")+
-#  ggtitle("(A) Nebraska")
-# p0
-# 
-# 
-# # p0<-p0 +
-# #   scale_y_continuous(
-# #     trans = pseudo_log_trans(base = 10),   # linear near 0, log-like further up
-# #     breaks = c(0, 0.001, 0.01, 0.03, 0.1),
-# #     labels = c("0", "0.001", "0.01", "0.03", "0.1"),
-# #     limits = c(0, 0.1),
-# #     oob = scales::squish
-# #   ) +
-# #   theme(legend.position = "none")
-# 
-# 
-# 
-# 
-# p00<-ggplot(data=subset(prev_esti_by_ys_col,yer!="2024"),aes(x=week,y=optim_p_dynamic))+
-#   geom_ribbon(aes(x=week,ymin=dynamic_q1,ymax=dynamic_q2,fill = state),alpha=1)+
-#   geom_line()+
-#   facet_wrap(~as.factor(yer),ncol=3)+
-#   #  scale_fill_manual(values = c("#a86463","#ad7f00"),
-#   #       labels=c("Binarised","Pooled Ct values"))+
-#   # xlim(20,45)+
-#   ylim(0,0.03)+
-#   # scale_y_log10() +  
-#   ylab("Estimated productive \n infection prevalence")+
-#   xlab("Week")+
-#   scale_color_manual(values  = wes_palette("AsteroidCity1", 3, type = "continuous"))+
-#   default_theme +
-#   theme(legend.position = "none")+
-# ggtitle("(B) Colorado")
-# p00
-# 
-# p0  <- p0  + theme(axis.title.y = element_blank())
-# p00 <- p00 + theme(axis.title.y = element_blank())
-# 
-# library(ggpubr)
-# 
-# ggarrange(p0, p00, nrow = 2) %>%
-#   annotate_figure(
-#     left = text_grob("Estimated productive  infection prevalence", rot = 90,size=14)
-#   )
-# 
-# 
-# 
-# 
-# ggsave("figures/figure_7_supplement.png",last_plot(),height = 6,width = 10)
+
 

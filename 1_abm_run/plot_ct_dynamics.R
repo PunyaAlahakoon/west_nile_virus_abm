@@ -16,19 +16,20 @@ default_theme <- function() {
 }
 
 # ---- Load parameters ----
-ct_params <- read.csv("mozie_outputs_wth_decay_model/params/mozzie_ct_params_2_1_0.5_0.1.csv",
+ct_params <- read.csv("mozie_outputs_wth_decay_model/params/mozzie_ct_params_1_0.5_1_0.csv",
                       stringsAsFactors = FALSE)
 
 # check the file loaded
 if (nrow(ct_params) == 0) stop("ct_params is empty — check CSV path.")
-
-decays <- c(0, 0.1, 0.5, 0.9)
+decay_rates<-c(0,0.00001,0.001,0.01,0.05,0.1,0.5,0.9)
+decays <- decay_rates
 ct_lod <- 40
 tim_stps <- 45
 
+
 # Example: pick a single parameter row (you used row 310 in your snippet).
 # Make sure that row exists; otherwise pick a different row.
-row_to_use <- 310
+row_to_use <- 321
 if (row_to_use > nrow(ct_params)) {
   row_to_use <- nrow(ct_params)
   warning("Requested row > nrow(ct_params). Using last row instead.")
@@ -80,11 +81,20 @@ for (i in seq_along(decays)) {
   ct_curve <- rbind(ct_curve, i_cts)
 }
 
-# ---- Plot ----
-p_ct_dynamics <- ggplot(data = ct_curve, aes(x = time, y = cts, color = as.factor(decay_rate))) +
+min_ct <- min(ct_curve$cts, na.rm = TRUE)
+
+ct_curve$decay_rate=as.factor(ct_curve$decay_rate)
+levels(ct_curve$decay_rate)<-paste0("Decay rate = ",decay_rates)
+
+p_ct_dynamics <- ggplot(data = ct_curve,
+                        aes(x = time, y = cts)) +
+  geom_hline(yintercept = min_ct,
+             linetype = "dashed",
+             linewidth = 0.8,
+             color = "grey") +
   geom_line() +
   scale_y_reverse() +
-  facet_wrap(~ as.factor(decay_rate), labeller = label_both,ncol=2) +
+  facet_wrap(~ (decay_rate), ncol = 2) +
   scale_color_brewer(palette = "Dark2") +
   ylab("Ct value") +
   xlab("Time (days)") +
@@ -92,3 +102,4 @@ p_ct_dynamics <- ggplot(data = ct_curve, aes(x = time, y = cts, color = as.facto
   theme(legend.position = "none")
 
 print(p_ct_dynamics)
+

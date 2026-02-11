@@ -157,7 +157,7 @@ all_pools_lees_40$year=as.factor(all_pools_lees_40$year)
 levels(all_pools_lees_40$year)<-c("Year 1","Year 2","Year 3")
 
 lls<-paste0("Decay rate = ",decay_rates)
-keep_lab <- c(lls[1],lls[3],lls[4],lls[6],lls[8])
+keep_lab <- c(lls[1],lls[3],lls[4],lls[6],lls[7])
 
 
 p1 <- ggplot(
@@ -276,7 +276,7 @@ p_ct_dynamics
 p1|p_ct_dynamics
 
 
-ggsave("figures/figure_decay_rates.png",last_plot(), width = 12, height = 10)
+ggsave("figures/figure_decay_rates.png",last_plot(), width = 10, height = 12)
 
 
 
