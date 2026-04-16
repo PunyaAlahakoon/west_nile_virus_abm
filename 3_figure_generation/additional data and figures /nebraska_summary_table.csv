@@ -1,0 +1,545 @@
+"calculated_county","surv_year","disease_week","number_of_pools"
+"Adams",2022,23,5
+"Adams",2022,25,10
+"Adams",2022,27,6
+"Adams",2022,29,9
+"Adams",2022,31,4
+"Adams",2022,33,25
+"Adams",2022,35,35
+"Adams",2022,37,22
+"Adams",2022,39,9
+"Adams",2023,23,4
+"Adams",2023,25,7
+"Adams",2023,27,7
+"Adams",2023,29,5
+"Adams",2023,31,10
+"Adams",2023,33,24
+"Adams",2023,35,22
+"Adams",2023,37,12
+"Adams",2023,39,4
+"Adams",2024,23,4
+"Adams",2024,25,3
+"Adams",2024,27,6
+"Adams",2024,29,8
+"Adams",2024,31,8
+"Adams",2024,33,11
+"Adams",2024,35,34
+"Adams",2024,37,11
+"Adams",2024,39,7
+"Box Butte",2022,24,2
+"Box Butte",2022,27,8
+"Box Butte",2022,28,4
+"Box Butte",2022,30,4
+"Box Butte",2022,32,6
+"Box Butte",2022,34,6
+"Box Butte",2022,35,8
+"Box Butte",2022,38,3
+"Box Butte",2023,22,3
+"Box Butte",2023,24,2
+"Box Butte",2023,26,39
+"Box Butte",2023,28,31
+"Box Butte",2023,30,78
+"Box Butte",2023,32,4
+"Box Butte",2023,33,20
+"Box Butte",2023,34,36
+"Box Butte",2023,36,4
+"Box Butte",2023,38,5
+"Box Butte",2024,22,2
+"Box Butte",2024,24,2
+"Box Butte",2024,26,9
+"Box Butte",2024,28,10
+"Box Butte",2024,30,24
+"Box Butte",2024,32,3
+"Box Butte",2024,34,3
+"Box Butte",2024,36,5
+"Box Butte",2024,38,3
+"Cuming",2023,22,6
+"Cuming",2023,24,4
+"Cuming",2023,26,1
+"Cuming",2023,29,3
+"Cuming",2023,30,2
+"Cuming",2023,32,2
+"Cuming",2023,34,2
+"Cuming",2023,36,1
+"Cuming",2024,22,3
+"Cuming",2024,24,2
+"Cuming",2024,26,2
+"Cuming",2024,28,4
+"Cuming",2024,30,4
+"Cuming",2024,32,4
+"Cuming",2024,34,5
+"Cuming",2024,36,6
+"Cuming",2024,38,4
+"Dakota",2022,25,3
+"Dakota",2022,26,3
+"Dakota",2022,29,2
+"Dakota",2022,31,4
+"Dakota",2022,34,7
+"Dakota",2022,35,7
+"Dakota",2022,37,5
+"Dakota",2022,39,3
+"Dakota",2023,24,5
+"Dakota",2023,25,4
+"Dakota",2023,28,6
+"Dakota",2023,29,6
+"Dakota",2023,32,2
+"Dakota",2023,34,4
+"Dakota",2023,36,2
+"Dakota",2023,38,4
+"Dakota",2024,23,4
+"Dakota",2024,26,5
+"Dakota",2024,28,10
+"Dakota",2024,29,10
+"Dakota",2024,32,5
+"Dakota",2024,34,5
+"Dakota",2024,35,6
+"Dakota",2024,37,6
+"Dakota",2024,39,2
+"Dawson",2022,22,2
+"Dawson",2022,24,2
+"Dawson",2022,26,6
+"Dawson",2022,28,6
+"Dawson",2022,30,7
+"Dawson",2022,32,15
+"Dawson",2022,34,18
+"Dawson",2022,36,27
+"Dawson",2022,38,16
+"Dawson",2023,22,8
+"Dawson",2023,24,8
+"Dawson",2023,26,23
+"Dawson",2023,28,10
+"Dawson",2023,30,16
+"Dawson",2023,32,13
+"Dawson",2023,34,35
+"Dawson",2023,36,11
+"Dawson",2023,38,13
+"Dawson",2024,22,7
+"Dawson",2024,24,25
+"Dawson",2024,26,11
+"Dawson",2024,28,16
+"Dawson",2024,30,13
+"Dawson",2024,32,14
+"Dawson",2024,34,43
+"Dawson",2024,36,13
+"Dawson",2024,38,10
+"Dodge",2022,23,3
+"Dodge",2022,25,3
+"Dodge",2022,27,5
+"Dodge",2022,29,6
+"Dodge",2022,31,4
+"Dodge",2022,33,4
+"Dodge",2022,35,12
+"Dodge",2022,37,7
+"Dodge",2022,39,1
+"Dodge",2023,23,4
+"Dodge",2023,25,5
+"Dodge",2023,27,4
+"Dodge",2023,29,4
+"Dodge",2023,31,5
+"Dodge",2023,32,6
+"Dodge",2023,35,7
+"Dodge",2023,38,5
+"Dodge",2023,39,5
+"Dodge",2024,23,2
+"Dodge",2024,25,2
+"Dodge",2024,27,2
+"Dodge",2024,29,2
+"Dodge",2024,31,2
+"Dodge",2024,33,2
+"Dodge",2024,35,2
+"Dodge",2024,37,2
+"Dodge",2024,39,1
+"Douglas",2022,22,3
+"Douglas",2022,24,2
+"Douglas",2022,26,7
+"Douglas",2022,28,7
+"Douglas",2022,30,2
+"Douglas",2022,32,4
+"Douglas",2022,34,12
+"Douglas",2022,36,16
+"Douglas",2022,38,11
+"Douglas",2023,22,11
+"Douglas",2023,24,7
+"Douglas",2023,26,10
+"Douglas",2023,28,7
+"Douglas",2023,30,7
+"Douglas",2023,32,10
+"Douglas",2023,34,9
+"Douglas",2023,36,15
+"Douglas",2023,38,11
+"Douglas",2024,22,8
+"Douglas",2024,24,14
+"Douglas",2024,26,6
+"Douglas",2024,28,12
+"Douglas",2024,30,7
+"Douglas",2024,32,6
+"Douglas",2024,34,14
+"Douglas",2024,36,15
+"Douglas",2024,38,12
+"Garfield",2022,26,1
+"Garfield",2022,28,5
+"Garfield",2022,30,5
+"Garfield",2022,32,5
+"Garfield",2022,34,7
+"Garfield",2022,36,7
+"Garfield",2022,38,5
+"Garfield",2023,22,5
+"Garfield",2023,24,5
+"Garfield",2023,26,6
+"Garfield",2023,28,5
+"Garfield",2023,30,6
+"Garfield",2023,32,7
+"Garfield",2023,34,9
+"Garfield",2023,36,4
+"Garfield",2023,38,5
+"Garfield",2024,22,6
+"Garfield",2024,24,6
+"Garfield",2024,26,6
+"Garfield",2024,28,6
+"Garfield",2024,30,6
+"Garfield",2024,32,8
+"Garfield",2024,34,4
+"Garfield",2024,36,5
+"Garfield",2024,38,4
+"Hall",2022,22,7
+"Hall",2022,24,4
+"Hall",2022,26,1
+"Hall",2022,28,4
+"Hall",2022,30,3
+"Hall",2022,32,10
+"Hall",2022,34,14
+"Hall",2022,36,16
+"Hall",2022,38,13
+"Hall",2023,22,8
+"Hall",2023,24,9
+"Hall",2023,26,6
+"Hall",2023,28,9
+"Hall",2023,30,8
+"Hall",2023,32,18
+"Hall",2023,34,15
+"Hall",2023,36,10
+"Hall",2023,38,10
+"Hall",2024,22,13
+"Hall",2024,24,7
+"Hall",2024,26,10
+"Hall",2024,28,11
+"Hall",2024,30,11
+"Hall",2024,32,8
+"Hall",2024,34,12
+"Hall",2024,36,12
+"Hall",2024,38,8
+"Holt",2022,23,6
+"Holt",2022,25,5
+"Holt",2022,27,2
+"Holt",2022,29,4
+"Holt",2022,31,3
+"Holt",2022,33,6
+"Holt",2022,35,7
+"Holt",2022,37,3
+"Holt",2022,39,3
+"Holt",2023,23,5
+"Holt",2023,25,5
+"Holt",2023,28,5
+"Holt",2023,29,6
+"Holt",2023,32,5
+"Holt",2023,33,12
+"Holt",2023,35,6
+"Holt",2023,37,6
+"Holt",2024,23,6
+"Holt",2024,25,7
+"Holt",2024,27,5
+"Holt",2024,28,17
+"Holt",2024,31,7
+"Holt",2024,33,5
+"Holt",2024,35,6
+"Holt",2024,37,6
+"Holt",2024,39,4
+"Jefferson",2022,25,2
+"Jefferson",2022,27,6
+"Jefferson",2022,29,1
+"Jefferson",2022,33,6
+"Jefferson",2022,35,14
+"Jefferson",2022,37,10
+"Jefferson",2022,39,2
+"Lancaster",2022,23,5
+"Lancaster",2022,25,10
+"Lancaster",2022,27,3
+"Lancaster",2022,29,7
+"Lancaster",2022,31,5
+"Lancaster",2022,33,10
+"Lancaster",2022,35,17
+"Lancaster",2022,37,14
+"Lancaster",2022,39,8
+"Lancaster",2023,23,8
+"Lancaster",2023,25,10
+"Lancaster",2023,27,13
+"Lancaster",2023,29,13
+"Lancaster",2023,31,15
+"Lancaster",2023,33,14
+"Lancaster",2023,35,16
+"Lancaster",2023,37,14
+"Lancaster",2023,39,8
+"Lancaster",2024,23,12
+"Lancaster",2024,25,12
+"Lancaster",2024,27,11
+"Lancaster",2024,29,13
+"Lancaster",2024,31,14
+"Lancaster",2024,33,13
+"Lancaster",2024,35,12
+"Lancaster",2024,37,11
+"Lancaster",2024,39,8
+"Lincoln",2022,22,1
+"Lincoln",2022,24,3
+"Lincoln",2022,26,3
+"Lincoln",2022,28,2
+"Lincoln",2022,30,2
+"Lincoln",2022,34,4
+"Lincoln",2022,36,5
+"Lincoln",2022,39,2
+"Lincoln",2023,22,4
+"Lincoln",2023,24,3
+"Lincoln",2023,26,5
+"Lincoln",2023,28,5
+"Lincoln",2023,31,6
+"Lincoln",2023,32,6
+"Lincoln",2023,34,7
+"Lincoln",2023,36,6
+"Lincoln",2024,22,4
+"Lincoln",2024,24,6
+"Lincoln",2024,26,7
+"Lincoln",2024,28,3
+"Lincoln",2024,30,2
+"Lincoln",2024,32,3
+"Lincoln",2024,34,4
+"Lincoln",2024,36,6
+"Lincoln",2024,38,3
+"Madison",2022,22,1
+"Madison",2022,24,3
+"Madison",2022,26,2
+"Madison",2022,28,2
+"Madison",2022,30,1
+"Madison",2022,32,5
+"Madison",2022,34,5
+"Madison",2022,36,6
+"Madison",2022,38,6
+"Platte",2022,24,2
+"Platte",2022,25,3
+"Platte",2022,26,1
+"Platte",2022,28,1
+"Platte",2022,30,2
+"Platte",2022,32,1
+"Platte",2022,34,3
+"Platte",2022,36,4
+"Platte",2022,38,3
+"Platte",2023,22,3
+"Platte",2023,26,2
+"Platte",2023,28,4
+"Platte",2023,30,3
+"Platte",2023,32,3
+"Platte",2023,34,4
+"Platte",2023,36,6
+"Platte",2023,38,1
+"Platte",2024,24,4
+"Platte",2024,26,6
+"Platte",2024,28,6
+"Platte",2024,32,1
+"Platte",2024,34,1
+"Platte",2024,36,4
+"Platte",2024,38,1
+"Red Willow",2022,27,1
+"Red Willow",2022,29,1
+"Red Willow",2022,33,2
+"Red Willow",2022,35,3
+"Red Willow",2022,38,5
+"Red Willow",2022,39,3
+"Red Willow",2023,24,6
+"Red Willow",2023,25,8
+"Red Willow",2023,26,4
+"Red Willow",2023,30,2
+"Red Willow",2023,31,2
+"Red Willow",2023,33,5
+"Red Willow",2023,35,4
+"Red Willow",2023,37,1
+"Red Willow",2023,39,3
+"Red Willow",2024,23,3
+"Red Willow",2024,25,1
+"Red Willow",2024,27,2
+"Red Willow",2024,29,2
+"Red Willow",2024,31,1
+"Red Willow",2024,33,2
+"Red Willow",2024,35,4
+"Red Willow",2024,37,3
+"Red Willow",2024,39,1
+"Richardson",2022,22,3
+"Richardson",2022,24,2
+"Richardson",2022,26,4
+"Richardson",2022,28,3
+"Richardson",2022,30,1
+"Richardson",2022,32,3
+"Richardson",2022,34,7
+"Richardson",2022,36,6
+"Richardson",2022,38,7
+"Richardson",2023,22,5
+"Richardson",2023,24,3
+"Richardson",2023,26,1
+"Richardson",2023,28,3
+"Richardson",2023,30,5
+"Richardson",2023,32,5
+"Richardson",2023,34,6
+"Richardson",2023,36,6
+"Richardson",2023,38,5
+"Richardson",2024,22,7
+"Richardson",2024,24,6
+"Richardson",2024,26,5
+"Richardson",2024,28,8
+"Richardson",2024,30,3
+"Richardson",2024,32,6
+"Richardson",2024,34,4
+"Richardson",2024,36,6
+"Richardson",2024,38,3
+"Saline",2023,23,2
+"Saline",2023,25,4
+"Saline",2023,27,3
+"Saline",2023,29,5
+"Saline",2023,31,5
+"Saline",2023,33,8
+"Saline",2023,35,12
+"Saline",2023,37,5
+"Saline",2023,39,6
+"Saline",2024,23,2
+"Saline",2024,25,3
+"Saline",2024,27,2
+"Saline",2024,31,4
+"Saline",2024,33,3
+"Saline",2024,35,5
+"Saline",2024,37,6
+"Saline",2024,39,3
+"Sarpy",2022,23,1
+"Sarpy",2022,24,1
+"Sarpy",2022,26,5
+"Sarpy",2022,28,3
+"Sarpy",2022,30,2
+"Sarpy",2022,32,4
+"Sarpy",2022,34,3
+"Sarpy",2022,36,7
+"Sarpy",2022,38,4
+"Sarpy",2023,22,2
+"Sarpy",2023,24,1
+"Sarpy",2023,26,4
+"Sarpy",2023,28,4
+"Sarpy",2023,30,4
+"Sarpy",2023,32,7
+"Sarpy",2023,34,6
+"Sarpy",2023,38,4
+"Sarpy",2024,22,7
+"Sarpy",2024,24,12
+"Sarpy",2024,26,6
+"Sarpy",2024,28,8
+"Sarpy",2024,30,7
+"Sarpy",2024,32,6
+"Sarpy",2024,34,10
+"Sarpy",2024,36,8
+"Sarpy",2024,38,3
+"Saunders",2024,23,2
+"Saunders",2024,25,1
+"Saunders",2024,27,2
+"Saunders",2024,29,2
+"Saunders",2024,31,2
+"Saunders",2024,33,1
+"Saunders",2024,35,2
+"Saunders",2024,37,2
+"Saunders",2024,39,1
+"Scotts Bluff",2022,23,2
+"Scotts Bluff",2022,27,5
+"Scotts Bluff",2022,29,6
+"Scotts Bluff",2022,32,17
+"Scotts Bluff",2022,33,3
+"Scotts Bluff",2022,35,10
+"Scotts Bluff",2022,37,6
+"Scotts Bluff",2022,39,4
+"Scotts Bluff",2023,23,3
+"Scotts Bluff",2023,25,5
+"Scotts Bluff",2023,27,14
+"Scotts Bluff",2023,29,107
+"Scotts Bluff",2023,31,50
+"Scotts Bluff",2023,32,45
+"Scotts Bluff",2023,33,47
+"Scotts Bluff",2023,35,8
+"Scotts Bluff",2023,37,7
+"Scotts Bluff",2023,39,5
+"Scotts Bluff",2024,23,4
+"Scotts Bluff",2024,25,2
+"Scotts Bluff",2024,27,6
+"Scotts Bluff",2024,29,26
+"Scotts Bluff",2024,31,13
+"Scotts Bluff",2024,33,26
+"Scotts Bluff",2024,35,21
+"Scotts Bluff",2024,39,10
+"Thurston",2022,24,4
+"Thurston",2022,26,3
+"Thurston",2022,28,5
+"Thurston",2023,26,4
+"Thurston",2023,28,5
+"Thurston",2023,30,5
+"Thurston",2023,32,1
+"Thurston",2023,35,4
+"Washington",2024,23,2
+"Washington",2024,27,1
+"Washington",2024,29,2
+"Washington",2024,33,2
+"Washington",2024,35,1
+"Washington",2024,37,2
+"Washington",2024,39,1
+"Wayne",2022,23,6
+"Wayne",2022,25,4
+"Wayne",2022,27,3
+"Wayne",2022,29,9
+"Wayne",2022,31,8
+"Wayne",2022,33,6
+"Wayne",2022,36,11
+"Wayne",2022,37,6
+"Wayne",2022,39,4
+"Wayne",2023,23,5
+"Wayne",2023,25,6
+"Wayne",2023,29,7
+"Wayne",2023,31,5
+"Wayne",2023,33,8
+"Wayne",2023,35,4
+"Wayne",2023,37,6
+"Wayne",2023,39,3
+"Wayne",2024,23,8
+"Wayne",2024,25,16
+"Wayne",2024,27,8
+"Wayne",2024,29,18
+"Wayne",2024,31,6
+"Wayne",2024,33,6
+"Wayne",2024,35,7
+"Wayne",2024,37,9
+"Wayne",2024,39,8
+"York",2022,23,5
+"York",2022,25,4
+"York",2022,27,6
+"York",2022,29,3
+"York",2022,31,4
+"York",2022,33,2
+"York",2022,35,6
+"York",2022,37,7
+"York",2022,39,5
+"York",2023,23,4
+"York",2023,25,4
+"York",2023,27,3
+"York",2023,29,4
+"York",2023,31,5
+"York",2023,33,8
+"York",2023,35,8
+"York",2023,37,6
+"York",2023,39,5
+"York",2024,23,4
+"York",2024,25,4
+"York",2024,27,5
+"York",2024,29,6
+"York",2024,31,3
+"York",2024,33,4
+"York",2024,35,8
+"York",2024,37,5
+"York",2024,39,6
