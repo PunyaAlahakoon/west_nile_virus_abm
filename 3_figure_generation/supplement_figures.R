@@ -282,7 +282,7 @@ ci_summary <- joined_inner %>%
     binary_rel_width = if_else(binary_prev > 0, binary_width / binary_prev),
     ct_rel_width = if_else(ct_prev > 0, ct_width / ct_prev),
     
-    binary_width_for_zeros = if_else(binary_prev == 0, binary_width)
+    binary_width_for_zeros = if_else(binary_prev == 0, binary_width),
     ct_width_for_zeros = if_else(ct_prev == 0, ct_width)
   ) %>%
   group_by(state) %>%
