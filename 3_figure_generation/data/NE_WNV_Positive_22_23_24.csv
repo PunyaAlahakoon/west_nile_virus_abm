@@ -1,0 +1,406 @@
+﻿agency_code,agency_pool_num,surv_year,site_name,calculated_county,calculated_state,longitude,latitude,collection_date,disease_week,trap_type,lure,species,sex_condition,num_count,WNV,ctval
+CDHD,208,2022,Vet Cemetery,Hall,Nebraska,-98.378377,40.947494,7/12/2022,28,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,2,1,27.78
+THHD,329,2022,3 Rivers,Dodge,Nebraska,-96.476559,41.452661,8/2/2022,31,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,25,1,31.41
+THHD,328,2022,3 Rivers,Dodge,Nebraska,-96.476559,41.452661,8/2/2022,31,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,11,1,21.62
+TWHD,367,2022,PC Fence ( VET Fence),Dawson,Nebraska,-99.762889,40.728667,8/9/2022,32,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,30.81
+TWHD,366,2022,PC Fence ( VET Fence),Dawson,Nebraska,-99.762889,40.728667,8/9/2022,32,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,27.26
+NNHD,430,2022,WSC,Wayne,Nebraska,-97.010658,42.244431,8/17/2022,33,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,28,1,26.88
+SHHD,476,2022,HMS (Hastings Middle School),Adams,Nebraska,-98.42255,40.589086,8/18/2022,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,38.02
+SHHD,464,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,8/18/2022,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,35.25
+SHHD,460,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,8/18/2022,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,27.59
+SHHD,477,2022,HMS (Hastings Middle School),Adams,Nebraska,-98.42255,40.589086,8/18/2022,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,27.29
+SHHD,466,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,8/18/2022,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,26.08
+SHHD,465,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,8/18/2022,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,25.57
+SHHD,478,2022,HMS (Hastings Middle School),Adams,Nebraska,-98.42255,40.589086,8/18/2022,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,46,1,23.27
+TWHD,499,2022,Canaday,Dawson,Nebraska,-99.739667,40.701167,8/23/2022,34,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,6,1,39.37
+CDHD,539,2022,Hall Co Park,Hall,Nebraska,-98.37292,40.87566,8/23/2022,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,37,1,35.87
+ELHD,533,2022,Pollards,Madison,Nebraska,-97.418749,42.010552,8/23/2022,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,32,1,28.21
+TWHD,501,2022,Canaday,Dawson,Nebraska,-99.739667,40.701167,8/23/2022,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,27.17
+TWHD,506,2022,PC Fence ( VET Fence),Dawson,Nebraska,-99.762889,40.728667,8/23/2022,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,27.09
+TWHD,500,2022,Canaday,Dawson,Nebraska,-99.739667,40.701167,8/23/2022,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,23.71
+DAHD,525,2022,Salvation Army Camp,Dakota,Nebraska,-96.465798,42.44846,8/23/2022,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,32,1,21.83
+CDHD,538,2022,Hall Co Park,Hall,Nebraska,-98.37292,40.87566,8/23/2022,34,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,40,1,21.28
+CDHD,546,2022,Capital & Monitor Rd,Hall,Nebraska,-98.436928,40.945827,8/23/2022,34,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,22,1,20.84
+LBHD,549,2022,Wayne Lakins,Garfield,Nebraska,-99.125258,41.790681,8/24/2022,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,22.5
+PHHD,575,2022,Rainbow Acres,Box Butte,Nebraska,-102.768999,42.109894,8/30/2022,35,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,37,1,27.52
+THHD,590,2022,Luther Hormel Park,Dodge,Nebraska,-96.512222,41.41225,8/30/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,18,1,24.6
+LLHD,629,2022,Sutter,Lancaster,Nebraska,-96.6581132,40.7621939,8/31/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,8,1,39.02
+NCHD,616,2022,Potato Plant,Holt,Nebraska,-98.537462,42.429196,8/31/2022,35,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,35.61
+LLHD,626,2022,West A,Lancaster,Nebraska,-96.7788153,40.8004435,8/31/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,4,1,25.3
+LLHD,630,2022,Sutter,Lancaster,Nebraska,-96.6581132,40.7621939,8/31/2022,35,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,16,1,23.54
+SHHD,670,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/2/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,38.3
+SHHD,672,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/2/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,37.9
+SHHD,667,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/2/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,37.3
+SHHD,669,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/2/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,36.4
+SHHD,678,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/2/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,36.3
+SHHD,661,2022,HMS (Hastings Middle School),Adams,Nebraska,-98.42255,40.589086,9/2/2022,35,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,27,1,34.8
+SHHD,663,2022,GOEB (1010 E. 2nd St),Adams,Nebraska,-98.368371,40.584909,9/2/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,38,1,34.3
+SHHD,675,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/2/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,34.2
+SHHD,668,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/2/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,30.6
+SHHD,685,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/2/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,30.3
+SHHD,680,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/2/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,29.3
+SHHD,677,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/2/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,28.3
+SHHD,671,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/2/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,28.1
+SHHD,666,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/2/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,31,1,27.2
+SHHD,681,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/2/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,26.96
+SHHD,682,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/2/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,26.9
+SHHD,684,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/2/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,26.1
+SHHD,676,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/2/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,25.5
+SHHD,688,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/2/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,25.2
+SHHD,687,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/2/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,23.8
+SHHD,673,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/2/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,23.4
+SHHD,656,2022,PARK (Parkview Cemetary),Adams,Nebraska,-98.368428,40.598104,9/2/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,41,1,23.1
+SHHD,658,2022,HMS (Hastings Middle School),Adams,Nebraska,-98.42255,40.589086,9/2/2022,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,22.01
+WCHD,701,2022,Scouts Rest Ranch,Lincoln,Nebraska,-100.797016,41.165016,9/6/2022,36,CO2-CDC,Unspecified,Culex tarsalis,Females - Mixed,42,1,22.9
+DOHD,772,2022,Heron Haven,Douglas,Nebraska,-96.096672,41.292681,9/7/2022,36,CO2-CDC,CO2 (dry ice),Culex erraticus,Females - Mixed,28,1,38.5
+TWHD,721,2022,West Walnut (Walnut House),Dawson,Nebraska,-99.775242,40.771229,9/7/2022,36,CO2-CDC,CO2 (dry ice),Culex erraticus,Females - Mixed,6,1,34.2
+TWHD,724,2022,AR South,Dawson,Nebraska,-99.768333,40.757667,9/7/2022,36,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,24,1,29
+DOHD,773,2022,11th & Grace,Douglas,Nebraska,-95.927503,41.27686,9/7/2022,36,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,24,1,27.8
+CDHD,761,2022,Capital & Monitor Rd,Hall,Nebraska,-98.436928,40.945827,9/7/2022,36,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,25.5
+CDHD,763,2022,Capital & Monitor Rd,Hall,Nebraska,-98.436928,40.945827,9/7/2022,36,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,17,1,25.5
+TWHD,733,2022,AR House,Dawson,Nebraska,-99.76881,40.76453,9/7/2022,36,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,25.1
+TWHD,718,2022,West Walnut (Walnut House),Dawson,Nebraska,-99.775242,40.771229,9/7/2022,36,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,24.9
+LBHD,707,2022,Wayne Lakins,Garfield,Nebraska,-99.125258,41.790681,9/7/2022,36,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,24.1
+TWHD,730,2022,AR House,Dawson,Nebraska,-99.76881,40.76453,9/7/2022,36,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,24.1
+TWHD,729,2022,AR House,Dawson,Nebraska,-99.76881,40.76453,9/7/2022,36,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,23.8
+LBHD,703,2022,Jeffres,Garfield,Nebraska,-99.0733277,41.78122608,9/7/2022,36,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,18,1,23.1
+TWHD,714,2022,Reynolds,Dawson,Nebraska,-99.749134,40.707167,9/7/2022,36,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,10,1,22.5
+TWHD,728,2022,AR House,Dawson,Nebraska,-99.76881,40.76453,9/7/2022,36,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,22
+TWHD,734,2022,AR House,Dawson,Nebraska,-99.76881,40.76453,9/7/2022,36,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,21.2
+CDHD,758,2022,GIVH,Hall,Nebraska,-98.368211,40.948474,9/7/2022,36,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,34,1,0
+NNHD,792,2022,WSC,Wayne,Nebraska,-97.010658,42.244431,9/8/2022,36,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,39.3
+NNHD,793,2022,WSC,Wayne,Nebraska,-97.010658,42.244431,9/8/2022,36,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,29.7
+NNHD,789,2022,WSC,Wayne,Nebraska,-97.010658,42.244431,9/8/2022,36,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,29.1
+NNHD,791,2022,WSC,Wayne,Nebraska,-97.010658,42.244431,9/8/2022,36,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,26.2
+THHD,810,2022,3 Rivers,Dodge,Nebraska,-96.476559,41.452661,9/13/2022,37,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,14,1,20.1
+FCHD,816,2022,Country Club Terrace,York,Nebraska,-97.60280556,40.85905556,9/13/2022,37,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,19.4
+SHHD,840,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/14/2022,37,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,37.2
+SHHD,835,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/14/2022,37,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,37
+SHHD,829,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/14/2022,37,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,30.6
+SHHD,821,2022,PARK (Parkview Cemetary),Adams,Nebraska,-98.368428,40.598104,9/14/2022,37,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,16,1,24.1
+SHHD,842,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/14/2022,37,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,32,1,21.1
+SHHD,832,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/14/2022,37,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,21
+SHHD,841,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/14/2022,37,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,20.7
+SHHD,838,2022,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/14/2022,37,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,20.4
+TWHD,886,2022,Canaday,Dawson,Nebraska,-99.739667,40.701167,9/20/2022,38,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,48,1,27.03
+TWHD,885,2022,Canaday,Dawson,Nebraska,-99.739667,40.701167,9/20/2022,38,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,23.75
+CDHD,896,2022,Vet Cemetery,Hall,Nebraska,-98.378377,40.947494,9/20/2022,38,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,11,1,21.21
+CDHD,904,2022,GIVH,Hall,Nebraska,-98.368211,40.948474,9/20/2022,38,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,1,1,19.13
+LBHD,939,2022,Wayne Lakins,Garfield,Nebraska,-99.125258,41.790681,9/21/2022,38,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,2,1,34.93
+THHD,150,2023,Fremont Golf Course,Dodge,Nebraska,-96.507138,41.454253,6/20/2023,25,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,13,1,34.3
+LLHD,160,2023,Prairie View,Lancaster,Nebraska,-96.6717039,40.878826,6/20/2023,25,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,9,1,20
+SWHD,188,2023,Dewey,Red Willow,Nebraska,-100.564967,40.265767,6/21/2023,25,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,30.8
+TWHD,268,2023,Canaday,Dawson,Nebraska,-99.739667,40.701167,6/26/2023,26,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,25.2
+SWHD,301,2023,Kinship Pointe (formerly Brookdale),Red Willow,Nebraska,-100.613054,40.211726,6/27/2023,26,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,10,1,34.4
+PHHD,216,2023,Rainbow Acres,Box Butte,Nebraska,-102.768999,42.109894,6/27/2023,26,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,25.3
+PHHD,207,2023,Rainbow Acres,Box Butte,Nebraska,-102.768999,42.109894,6/27/2023,26,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,25,1,0
+PHHD,345,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/4/2023,27,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,27.1
+PHHD,375,2023,Animal Center,Box Butte,Nebraska,-102.838841,42.112107,7/11/2023,28,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,36.1
+PHHD,378,2023,Animal Center,Box Butte,Nebraska,-102.838841,42.112107,7/11/2023,28,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,32.7
+CDHD,420,2023,Hall Co Park,Hall,Nebraska,-98.37292,40.87566,7/11/2023,28,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,47,1,31.9
+PHHD,376,2023,Animal Center,Box Butte,Nebraska,-102.838841,42.112107,7/11/2023,28,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,27.7
+TWHD,392,2023,PC Fence ( VET Fence),Dawson,Nebraska,-99.762889,40.728667,7/11/2023,28,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,10,1,27.5
+PHHD,367,2023,Rainbow Acres,Box Butte,Nebraska,-102.768999,42.109894,7/11/2023,28,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,27.3
+PHHD,373,2023,Animal Center,Box Butte,Nebraska,-102.838841,42.112107,7/11/2023,28,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,23.1
+CDHD,422,2023,Hall Co Park,Hall,Nebraska,-98.37292,40.87566,7/11/2023,28,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,49,1,23
+PHHD,372,2023,Animal Center,Box Butte,Nebraska,-102.838841,42.112107,7/11/2023,28,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,22.6
+PHHD,380,2023,Animal Center,Box Butte,Nebraska,-102.838841,42.112107,7/11/2023,28,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,22
+PHHD,550,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,39.2
+THHD,462,2023,Fremont Golf Course,Dodge,Nebraska,-96.507138,41.454253,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,14,1,38.6
+PHHD,516,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,38.6
+PHHD,578,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,38.6
+PHHD,598,2023,Meisner's,Scotts Bluff,Nebraska,-103.4958,41.81533,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,25,1,38.1
+PHHD,556,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,37.2
+PHHD,489,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,37.1
+PHHD,535,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,36.9
+PHHD,534,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,36.6
+PHHD,537,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,36.3
+PHHD,545,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,36.3
+PHHD,581,2023,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,17,1,36.3
+PHHD,562,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,35.8
+PHHD,582,2023,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,35.3
+PHHD,568,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,35.2
+PHHD,559,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,35
+PHHD,586,2023,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,34.7
+PHHD,514,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,34.4
+PHHD,584,2023,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,34.3
+PHHD,597,2023,Meisner's,Scotts Bluff,Nebraska,-103.4958,41.81533,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,49,1,32.3
+PHHD,539,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,31
+PHHD,512,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,28.8
+PHHD,543,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,28.7
+PHHD,494,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,27.8
+PHHD,492,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,26.9
+PHHD,587,2023,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,26.2
+PHHD,583,2023,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,26.1
+PHHD,526,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,26
+PHHD,490,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,25.4
+PHHD,502,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,24.7
+PHHD,488,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,24
+PHHD,518,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,24
+PHHD,560,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,23.9
+THHD,465,2023,3 Rivers,Dodge,Nebraska,-96.476559,41.452661,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,20,1,23.1
+PHHD,564,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,23
+PHHD,486,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,22.9
+PHHD,540,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,22.5
+PHHD,585,2023,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,22.4
+PHHD,567,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,22.2
+PHHD,580,2023,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,4,1,20
+PHHD,595,2023,Meisner's,Scotts Bluff,Nebraska,-103.4958,41.81533,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,20
+PHHD,519,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/18/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,0
+ELHD,711,2023,Wilderness Park East,Cuming,Nebraska,-96.690786,41.83471,7/19/2023,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,4,1,23
+TWHD,688,2023,West Walnut (Walnut House),Dawson,Nebraska,-99.775242,40.771229,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,3,1,38.9
+PHHD,642,2023,Hemingford Golf Course,Box Butte,Nebraska,-103.07893,42.325391,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,38.5
+PHHD,654,2023,Hemingford Golf Course,Box Butte,Nebraska,-103.07893,42.325391,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,38.5
+PHHD,646,2023,Hemingford Golf Course,Box Butte,Nebraska,-103.07893,42.325391,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,38.3
+PHHD,637,2023,Hemingford Golf Course,Box Butte,Nebraska,-103.07893,42.325391,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,38.1
+PHHD,644,2023,Hemingford Golf Course,Box Butte,Nebraska,-103.07893,42.325391,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,37.9
+TWHD,687,2023,PC Fence ( VET Fence),Dawson,Nebraska,-99.762889,40.728667,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,2,1,37.8
+PHHD,638,2023,Hemingford Golf Course,Box Butte,Nebraska,-103.07893,42.325391,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,37.6
+PHHD,640,2023,Hemingford Golf Course,Box Butte,Nebraska,-103.07893,42.325391,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,37.5
+PHHD,635,2023,Hemingford Golf Course,Box Butte,Nebraska,-103.07893,42.325391,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,37.2
+PHHD,643,2023,Hemingford Golf Course,Box Butte,Nebraska,-103.07893,42.325391,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,37.2
+PHHD,659,2023,Animal Center,Box Butte,Nebraska,-102.838841,42.112107,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,37.1
+PHHD,618,2023,Rainbow Acres,Box Butte,Nebraska,-102.768999,42.109894,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,36.5
+PHHD,647,2023,Hemingford Golf Course,Box Butte,Nebraska,-103.07893,42.325391,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,36.3
+PHHD,615,2023,Rainbow Acres,Box Butte,Nebraska,-102.768999,42.109894,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,36.2
+PHHD,663,2023,Animal Center,Box Butte,Nebraska,-102.838841,42.112107,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,35.5
+PHHD,677,2023,Animal Center,Box Butte,Nebraska,-102.838841,42.112107,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,34.4
+PHHD,650,2023,Hemingford Golf Course,Box Butte,Nebraska,-103.07893,42.325391,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,34.2
+PHHD,655,2023,Hemingford Golf Course,Box Butte,Nebraska,-103.07893,42.325391,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,33
+PHHD,653,2023,Hemingford Golf Course,Box Butte,Nebraska,-103.07893,42.325391,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,31.6
+PHHD,651,2023,Hemingford Golf Course,Box Butte,Nebraska,-103.07893,42.325391,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,28.7
+PHHD,622,2023,Rainbow Acres,Box Butte,Nebraska,-102.768999,42.109894,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,28
+PHHD,605,2023,Rainbow Acres,Box Butte,Nebraska,-102.768999,42.109894,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,25.8
+PHHD,623,2023,Rainbow Acres,Box Butte,Nebraska,-102.768999,42.109894,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,25
+PHHD,641,2023,Hemingford Golf Course,Box Butte,Nebraska,-103.07893,42.325391,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,24.4
+PHHD,660,2023,Animal Center,Box Butte,Nebraska,-102.838841,42.112107,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,24.1
+PHHD,639,2023,Hemingford Golf Course,Box Butte,Nebraska,-103.07893,42.325391,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,23
+PHHD,649,2023,Hemingford Golf Course,Box Butte,Nebraska,-103.07893,42.325391,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,21.5
+PHHD,679,2023,Animal Center,Box Butte,Nebraska,-102.838841,42.112107,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,20.3
+PHHD,667,2023,Animal Center,Box Butte,Nebraska,-102.838841,42.112107,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,20.1
+PHHD,620,2023,Rainbow Acres,Box Butte,Nebraska,-102.768999,42.109894,7/25/2023,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,19.5
+LBHD,732,2023,Wayne Lakins,Garfield,Nebraska,-99.125258,41.790681,7/26/2023,30,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,2,1,24
+WCHD,744,2023,Newberry Access,Lincoln,Nebraska,-100.7263,41.11189,7/30/2023,31,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,23,1,37.5
+PHHD,824,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/1/2023,31,CO2-CDC,CO2 (dry ice),Culex,Females - Mixed,50,1,38.7
+PHHD,805,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/1/2023,31,CO2-CDC,CO2 (dry ice),Culex,Females - Mixed,50,1,38.3
+PHHD,809,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/1/2023,31,CO2-CDC,CO2 (dry ice),Culex,Females - Mixed,50,1,37.6
+PHHD,830,2023,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,8/1/2023,31,CO2-CDC,CO2 (dry ice),Culex,Females - Mixed,50,1,37.4
+PHHD,798,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/1/2023,31,CO2-CDC,CO2 (dry ice),Culex,Females - Mixed,50,1,37.1
+PHHD,799,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/1/2023,31,CO2-CDC,CO2 (dry ice),Culex,Females - Mixed,50,1,37
+PHHD,819,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/1/2023,31,CO2-CDC,CO2 (dry ice),Culex,Females - Mixed,50,1,36.7
+PHHD,822,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/1/2023,31,CO2-CDC,CO2 (dry ice),Culex,Females - Mixed,50,1,36.7
+PHHD,792,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/1/2023,31,CO2-CDC,CO2 (dry ice),Culex,Females - Mixed,50,1,36.5
+PHHD,820,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/1/2023,31,CO2-CDC,CO2 (dry ice),Culex,Females - Mixed,50,1,36.4
+PHHD,831,2023,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,8/1/2023,31,CO2-CDC,CO2 (dry ice),Culex,Females - Mixed,50,1,36
+PHHD,825,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/1/2023,31,CO2-CDC,CO2 (dry ice),Culex,Females - Mixed,50,1,29.4
+SHHD,758,2023,PARK (Parkview Cemetary),Adams,Nebraska,-98.368428,40.598104,8/1/2023,31,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,17,1,26.7
+PHHD,807,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/1/2023,31,CO2-CDC,CO2 (dry ice),Culex,Females - Mixed,50,1,26.1
+SHHD,757,2023,PARK (Parkview Cemetary),Adams,Nebraska,-98.368428,40.598104,8/1/2023,31,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,23.4
+PHHD,823,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/1/2023,31,CO2-CDC,CO2 (dry ice),Culex,Females - Mixed,50,1,23.1
+PHHD,832,2023,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,8/1/2023,31,CO2-CDC,CO2 (dry ice),Culex,Females - Mixed,50,1,22.2
+SHHD,755,2023,PARK (Parkview Cemetary),Adams,Nebraska,-98.368428,40.598104,8/1/2023,31,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,21.9
+CDHD,851,2023,Capital & Monitor Rd,Hall,Nebraska,-98.436928,40.945827,8/8/2023,32,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,34.4
+CDHD,852,2023,Capital & Monitor Rd,Hall,Nebraska,-98.436928,40.945827,8/8/2023,32,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,31.7
+CDHD,855,2023,Capital & Monitor Rd,Hall,Nebraska,-98.436928,40.945827,8/8/2023,32,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,30.9
+CDHD,857,2023,Capital & Monitor Rd,Hall,Nebraska,-98.436928,40.945827,8/8/2023,32,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,7,1,27.2
+CDHD,853,2023,Capital & Monitor Rd,Hall,Nebraska,-98.436928,40.945827,8/8/2023,32,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,24.2
+CDHD,854,2023,Capital & Monitor Rd,Hall,Nebraska,-98.436928,40.945827,8/8/2023,32,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,23.3
+TWHD,883,2023,West Walnut (Walnut House),Dawson,Nebraska,-99.775242,40.771229,8/8/2023,32,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,17,1,20.2
+PHHD,865,2023,Hemingford Golf Course,Box Butte,Nebraska,-103.07893,42.325391,8/8/2023,32,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,4,1,17.8
+PHHD,932,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/10/2023,32,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,38.2
+ECHD,977,2023,Bark Park,Platte,Nebraska,-97.350679,41.476113,8/10/2023,32,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,6,1,38.2
+PHHD,929,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/10/2023,32,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,37.7
+PHHD,936,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/10/2023,32,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,37.2
+PHHD,924,2023,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,8/10/2023,32,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,38,1,37.1
+PHHD,959,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/10/2023,32,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,36,1,37.1
+PHHD,923,2023,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,8/10/2023,32,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,36.9
+PHHD,955,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/10/2023,32,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,36.9
+PHHD,939,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/10/2023,32,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,36.4
+PHHD,958,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/10/2023,32,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,36.3
+PHHD,949,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/10/2023,32,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,34.9
+ECHD,978,2023,West Pawnee Park,Platte,Nebraska,-97.368685,41.420164,8/10/2023,32,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,11,1,33.8
+PHHD,954,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/10/2023,32,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,33.1
+PHHD,930,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/10/2023,32,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,30.2
+PHHD,956,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/10/2023,32,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,29
+PHHD,922,2023,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,8/10/2023,32,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,42,1,26.4
+PHHD,937,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/10/2023,32,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,24.7
+PHHD,921,2023,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,8/10/2023,32,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,24.4
+PHHD,920,2023,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,8/10/2023,32,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,21.4
+PHHD,919,2023,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,8/10/2023,32,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,20.5
+PHHD,960,2023,Meisner's,Scotts Bluff,Nebraska,-103.4958,41.81533,8/10/2023,32,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,20.2
+PHHD,961,2023,Meisner's,Scotts Bluff,Nebraska,-103.4958,41.81533,8/10/2023,32,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,33,1,18.8
+SHHD,997,2023,GOEB (1010 E. 2nd St),Adams,Nebraska,-98.368371,40.584909,8/15/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,35.48
+FCHD,984,2023,Country Club Terrace,York,Nebraska,-97.60280556,40.85905556,8/15/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,34.8
+SHHD,991,2023,HMS (Hastings Middle School),Adams,Nebraska,-98.42255,40.589086,8/15/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,31.9
+SHHD,1006,2023,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,8/15/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,47,1,31.2
+SHHD,1010,2023,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,8/15/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,29.4
+PHHD,1069,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,38.6
+PHHD,1045,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,38.5
+LLHD,1096,2023,Prairie View,Lancaster,Nebraska,-96.6717039,40.878826,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,38.3
+PHHD,1064,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,38.2
+PHHD,1047,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,37.7
+PHHD,1051,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,37.6
+PHHD,1036,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,37.1
+PHHD,1058,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,37.1
+PHHD,1072,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,36.9
+PHHD,1054,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,36.7
+PHHD,1070,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,36.4
+PHHD,1065,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,36.3
+PHHD,1057,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,35.8
+PHHD,1061,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,35.5
+PHHD,1042,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,34.9
+PHHD,1068,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,34.5
+PHHD,1060,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,34.3
+PHHD,1046,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,30
+PHHD,1059,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,30
+PHHD,1038,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,45,1,29
+PHHD,1075,2023,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,27,1,28.5
+PHHD,1037,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,27.3
+PHHD,1056,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,26
+PHHD,1016,2023,Rainbow Acres,Box Butte,Nebraska,-102.768999,42.109894,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,25.7
+PHHD,1055,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,24.5
+PHHD,1035,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,24
+PHHD,1066,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,23.7
+PHHD,1032,2023,Hemingford Golf Course,Box Butte,Nebraska,-103.07893,42.325391,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,46,1,22.3
+PHHD,1015,2023,Rainbow Acres,Box Butte,Nebraska,-102.768999,42.109894,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,22.1
+PHHD,1024,2023,Animal Center,Box Butte,Nebraska,-102.838841,42.112107,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,22
+PHHD,1033,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,22
+PHHD,1029,2023,Animal Center,Box Butte,Nebraska,-102.838841,42.112107,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,21.4
+NCHD,1103,2023,Carney Park/Softball Fields,Holt,Nebraska,-98.644842,42.451573,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,36,1,20.8
+PHHD,1027,2023,Animal Center,Box Butte,Nebraska,-102.838841,42.112107,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,20.1
+LLHD,1097,2023,Prairie View,Lancaster,Nebraska,-96.6717039,40.878826,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,33,1,19.3
+LLHD,1092,2023,West A,Lancaster,Nebraska,-96.7788153,40.8004435,8/17/2023,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,47,1,0
+TWHD,1176,2023,West Walnut (Walnut House),Dawson,Nebraska,-99.775242,40.771229,8/22/2023,34,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,31.5
+PHHD,1158,2023,Animal Center,Box Butte,Nebraska,-102.838841,42.112107,8/22/2023,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,29.5
+TWHD,1200,2023,AR South,Dawson,Nebraska,-99.768333,40.757667,8/22/2023,34,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,28.4
+TWHD,1196,2023,AR South,Dawson,Nebraska,-99.768333,40.757667,8/22/2023,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,27.4
+PHHD,1143,2023,Animal Center,Box Butte,Nebraska,-102.838841,42.112107,8/22/2023,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,27.2
+CDHD,1234,2023,South Locust,Hall,Nebraska,-98.340737,40.894844,8/22/2023,34,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,27.2
+PHHD,1154,2023,Animal Center,Box Butte,Nebraska,-102.838841,42.112107,8/22/2023,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,26.5
+TWHD,1172,2023,West Walnut (Walnut House),Dawson,Nebraska,-99.775242,40.771229,8/22/2023,34,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,26.3
+PHHD,1157,2023,Animal Center,Box Butte,Nebraska,-102.838841,42.112107,8/22/2023,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,24.7
+TWHD,1188,2023,West Walnut (Walnut House),Dawson,Nebraska,-99.775242,40.771229,8/22/2023,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,24.5
+TWHD,1195,2023,Canaday,Dawson,Nebraska,-99.739667,40.701167,8/22/2023,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,27,1,24.5
+TWHD,1193,2023,Canaday,Dawson,Nebraska,-99.739667,40.701167,8/22/2023,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,50,1,23.9
+CDHD,1230,2023,Hall Co Park,Hall,Nebraska,-98.37292,40.87566,8/22/2023,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,9,1,23.9
+TWHD,1203,2023,PC Fence ( VET Fence),Dawson,Nebraska,-99.762889,40.728667,8/22/2023,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,30,1,20.7
+WCHD,1244,2023,Centennial,Lincoln,Nebraska,-100.770109,41.119319,8/23/2023,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,27,1,26.4
+WCHD,1241,2023,Newberry Access,Lincoln,Nebraska,-100.7263,41.11189,8/23/2023,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,43,1,23.9
+WCHD,1247,2023,Scouts Rest Ranch,Lincoln,Nebraska,-100.797016,41.165016,8/23/2023,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,37,1,23.1
+PHHD,1271,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/29/2023,35,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,6,1,37.4
+SHHD,1286,2023,HMS (Hastings Middle School),Adams,Nebraska,-98.42255,40.589086,8/29/2023,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,22.2
+PHHD,1269,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,8/29/2023,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,42,1,22.1
+PHHD,1275,2023,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,8/29/2023,35,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,36,1,19.1
+NCHD,1339,2023,Bridge Site,Holt,Nebraska,-98.677073,42.449155,8/30/2023,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,1,1,37.1
+PUHS,1322,2023,Tuxedo Park- Softball fields,Saline,Nebraska,-96.96826,40.63247,8/30/2023,35,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,18,1,20.1
+NCHD,1333,2023,Potato Plant,Holt,Nebraska,-98.537462,42.429196,8/30/2023,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,39,1,18.9
+NCHD,1340,2023,Bridge Site,Holt,Nebraska,-98.677073,42.449155,8/30/2023,35,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,5,1,16.8
+SWHD,1345,2023,Dewey,Red Willow,Nebraska,-100.564967,40.265767,8/31/2023,35,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,28,1,19.8
+TWHD,1358,2023,Reynolds,Dawson,Nebraska,-99.749134,40.707167,9/6/2023,36,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,22,1,32.58
+CDHD,1368,2023,Vet Cemetery,Hall,Nebraska,-98.378377,40.947494,9/6/2023,36,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,15,1,25.32
+CDHD,1369,2023,Vet Cemetery,Hall,Nebraska,-98.378377,40.947494,9/6/2023,36,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,17,1,24.84
+CDHD,1365,2023,Hall Co Park,Hall,Nebraska,-98.37292,40.87566,9/6/2023,36,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,10,1,24.42
+DOHD,1379,2023,Boys Town,Douglas,Nebraska,-96.135912,41.258268,9/6/2023,36,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,9,1,21.89
+DOHD,1372,2023,Seymour L. Smith Park,Douglas,Nebraska,-96.022357,41.194821,9/6/2023,36,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,7,1,20.79
+SEHD,1394,2023,Depot,Richardson,Nebraska,-95.603761,40.050651,9/6/2023,36,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,4,1,19.84
+PHHD,1418,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,9/12/2023,37,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,50,1,38.1
+PHHD,1420,2023,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,9/12/2023,37,CO2-CDC,CO2 (dry ice),Culex tarsalis,Females - Mixed,35,1,37.9
+SHHD,1462,2023,GOEB (1010 E. 2nd St),Adams,Nebraska,-98.368371,40.584909,9/13/2023,37,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,30,1,31.9
+NNHD,1451,2023,WSC,Wayne,Nebraska,-97.010658,42.244431,9/13/2023,37,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,17,1,23.3
+NCHD,1446,2023,Bridge Site,Holt,Nebraska,-98.677073,42.449155,9/13/2023,37,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,1,1,19.2
+CDHD,1508,2023,Capital & Monitor Rd,Hall,Nebraska,-98.436928,40.945827,9/19/2023,38,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,2,1,19.64
+DOHD,1482,2023,Boys Town,Douglas,Nebraska,-96.135912,41.258268,9/19/2023,38,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,4,1,19.14
+LLHD,1571,2023,East Campus,Lancaster,Nebraska,-96.6585356,40.8340531,9/28/2023,39,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,Females - Mixed,6,1,24.3
+DOHD,131,2024,11th & Grace,Douglas,Nebraska,-95.927503,41.27686,6/11/2024,24,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,21,1,35.3
+TWHD,155,2024,PC Fence ( VET Fence),Dawson,Nebraska,-99.762889,40.728667,6/11/2024,24,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,26,1,20.4
+PHHD,280,2024,Hemingford Golf Course,Box Butte,Nebraska,-103.07893,42.325391,6/25/2024,26,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,19,1,25.28
+NCHD,334,2024,Carney Park/Softball Fields,Holt,Nebraska,-98.644842,42.451573,7/2/2024,27,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,13,1,27.3
+NNHD,355,2024,Softball Complex,Wayne,Nebraska,-97.003837,42.228722,7/3/2024,27,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,38,1,28.7
+DOHD,437,2024,Seymour L. Smith Park,Douglas,Nebraska,-96.022357,41.194821,7/9/2024,28,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,1,1,37.4
+PHHD,383,2024,Hemingford Golf Course,Box Butte,Nebraska,-103.07893,42.325391,7/9/2024,28,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,47,1,30.5
+TWHD,402,2024,PC Fence ( VET Fence),Dawson,Nebraska,-99.762889,40.728667,7/9/2024,28,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,26.4
+PHHD,381,2024,Hemingford Golf Course,Box Butte,Nebraska,-103.07893,42.325391,7/9/2024,28,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,23.4
+NCHD,464,2024,Carney Park/Softball Fields,Holt,Nebraska,-98.644842,42.451573,7/10/2024,28,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,31,1,21.3
+PHHD,498,2024,Meisner's,Scotts Bluff,Nebraska,-103.4958,41.81533,7/15/2024,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,27.8
+PHHD,487,2024,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,7/15/2024,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,26.5
+PHHD,480,2024,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,7/15/2024,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,26.1
+PHHD,490,2024,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,7/15/2024,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,25.8
+PHHD,497,2024,Meisner's,Scotts Bluff,Nebraska,-103.4958,41.81533,7/15/2024,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,25.7
+PHHD,501,2024,Meisner's,Scotts Bluff,Nebraska,-103.4958,41.81533,7/15/2024,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,23.6
+PHHD,488,2024,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,7/15/2024,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,21
+NNHD,538,2024,WSC,Wayne,Nebraska,-97.010658,42.244431,7/17/2024,29,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,37.6
+PHHD,583,2024,Hemingford Golf Course,Box Butte,Nebraska,-103.07893,42.325391,7/23/2024,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,33.9
+PHHD,587,2024,Hemingford Golf Course,Box Butte,Nebraska,-103.07893,42.325391,7/23/2024,30,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,43,1,30.9
+PHHD,648,2024,Meisner's,Scotts Bluff,Nebraska,-103.4958,41.81533,7/29/2024,31,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,38.8
+PHHD,647,2024,Meisner's,Scotts Bluff,Nebraska,-103.4958,41.81533,7/29/2024,31,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,34.4
+PHHD,649,2024,Meisner's,Scotts Bluff,Nebraska,-103.4958,41.81533,7/29/2024,31,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,26.6
+PHHD,656,2024,Gering Storm Drain,Scotts Bluff,Nebraska,-103.64665,41.82469,7/29/2024,31,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,25.3
+SHHD,671,2024,GOEB (1010 E. 2nd St),Adams,Nebraska,-98.368371,40.584909,7/30/2024,31,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,50,1,28.6
+LLHD,669,2024,East Campus,Lancaster,Nebraska,-96.6585356,40.8340531,7/30/2024,31,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,35,1,23.2
+NNHD,695,2024,WSC,Wayne,Nebraska,-97.010658,42.244431,7/31/2024,31,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,31,1,27.3
+LBHD,755,2024,Willow Springs,Garfield,Nebraska,-99.097843,41.779268,8/5/2024,32,CO2-CDC,CO2 (pressurized gas),Culex tarsalis,female,4,1,23
+LBHD,760,2024,Wayne Lakins,Garfield,Nebraska,-99.125258,41.790681,8/5/2024,32,CO2-CDC,CO2 (pressurized gas),Culex tarsalis,female,49,1,22.5
+TWHD,752,2024,Canaday,Dawson,Nebraska,-99.739667,40.701167,8/6/2024,32,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,28
+TWHD,754,2024,Canaday,Dawson,Nebraska,-99.739667,40.701167,8/6/2024,32,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,20,1,22.1
+SCHD,733,2024,Chalco Hills Recreational Area,Sarpy,Nebraska,-96.160725,41.159581,8/6/2024,32,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,19,1,21.9
+LLHD,780,2024,East Campus,Lancaster,Nebraska,-96.6585356,40.8340531,8/13/2024,33,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,29,1,21.1
+NCHD,795,2024,Potato Plant,Holt,Nebraska,-98.537462,42.429196,8/14/2024,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,1,1,25.8
+SHHD,811,2024,GOEB (1010 E. 2nd St),Adams,Nebraska,-98.368371,40.584909,8/15/2024,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,40,1,34.3
+PHHD,799,2024,Meisner's,Scotts Bluff,Nebraska,-103.4958,41.81533,8/15/2024,33,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,32.2
+PHHD,806,2024,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,8/15/2024,33,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,30.9
+PHHD,805,2024,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,8/15/2024,33,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,25.6
+SHHD,831,2024,HMS (Hastings Middle School),Adams,Nebraska,-98.42255,40.589086,8/15/2024,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,50,1,21.4
+SHHD,825,2024,PARK (Parkview Cemetary),Adams,Nebraska,-98.368428,40.598104,8/15/2024,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,50,1,19.8
+NNHD,844,2024,Bike Path/Creek,Wayne,Nebraska,-97.018794,42.225526,8/16/2024,33,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,12,1,22.38
+TWHD,900,2024,PC Fence ( VET Fence),Dawson,Nebraska,-99.762889,40.728667,8/20/2024,34,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,42,1,36.2
+TWHD,891,2024,West Walnut (Walnut House),Dawson,Nebraska,-99.775242,40.771229,8/20/2024,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,35.1
+TWHD,890,2024,West Walnut (Walnut House),Dawson,Nebraska,-99.775242,40.771229,8/20/2024,34,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,34,1,31.3
+LBHD,864,2024,Wayne Lakins,Garfield,Nebraska,-99.125258,41.790681,8/20/2024,34,CO2-CDC,CO2 (pressurized gas),Culex tarsalis,female,34,1,28.6
+TWHD,898,2024,AR South,Dawson,Nebraska,-99.768333,40.757667,8/20/2024,34,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,50,1,25.9
+TWHD,920,2024,Canaday,Dawson,Nebraska,-99.739667,40.701167,8/20/2024,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,24.4
+TWHD,892,2024,West Walnut (Walnut House),Dawson,Nebraska,-99.775242,40.771229,8/20/2024,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,23.6
+TWHD,905,2024,PC Fence ( VET Fence),Dawson,Nebraska,-99.762889,40.728667,8/20/2024,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,23.1
+TWHD,915,2024,Canaday,Dawson,Nebraska,-99.739667,40.701167,8/20/2024,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,47,1,23.1
+TWHD,904,2024,PC Fence ( VET Fence),Dawson,Nebraska,-99.762889,40.728667,8/20/2024,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,22.6
+LBHD,863,2024,Willow Springs,Garfield,Nebraska,-99.097843,41.779268,8/20/2024,34,CO2-CDC,CO2 (pressurized gas),Culex tarsalis,female,22,1,22.3
+DOHD,882,2024,11th & Grace,Douglas,Nebraska,-95.927503,41.27686,8/20/2024,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,21.9
+TWHD,906,2024,PC Fence ( VET Fence),Dawson,Nebraska,-99.762889,40.728667,8/20/2024,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,21.6
+TWHD,903,2024,PC Fence ( VET Fence),Dawson,Nebraska,-99.762889,40.728667,8/20/2024,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,21.5
+TWHD,899,2024,AR South,Dawson,Nebraska,-99.768333,40.757667,8/20/2024,34,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,46,1,20.9
+DOHD,874,2024,Heron Haven,Douglas,Nebraska,-96.096672,41.292681,8/20/2024,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,16,1,20.5
+SCHD,861,2024,Chalco Hills Recreational Area,Sarpy,Nebraska,-96.160725,41.159581,8/20/2024,34,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,18,1,19.1
+SCHD,849,2024,Walnut Creek Recreational Area,Sarpy,Nebraska,-96.077582,41.137385,8/20/2024,34,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,4,1,18.7
+PHHD,970,2024,Mowry's,Scotts Bluff,Nebraska,-103.94834,41.96696,8/26/2024,35,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,30.3
+PHHD,964,2024,SB Drain (5 Oaks)/Chili's,Scotts Bluff,Nebraska,-103.67349,41.882,8/26/2024,35,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,50,1,25.8
+FCHD,973,2024,1411 Road I,York,Nebraska,-97.67302,40.894542,8/27/2024,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,50,1,31.2
+LLHD,957,2024,West A,Lancaster,Nebraska,-96.7788153,40.8004435,8/27/2024,35,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,44,1,27.3
+FCHD,978,2024,Country Club Terrace,York,Nebraska,-97.60280556,40.85905556,8/27/2024,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,41,1,23.5
+FCHD,972,2024,1411 Road I,York,Nebraska,-97.67302,40.894542,8/27/2024,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,50,1,23.1
+SHHD,999,2024,GOEB (1010 E. 2nd St),Adams,Nebraska,-98.368371,40.584909,8/28/2024,35,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,20,1,37.8
+SHHD,1016,2024,PARK (Parkview Cemetary),Adams,Nebraska,-98.368428,40.598104,8/28/2024,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,50,1,34.9
+SHHD,996,2024,GOEB (1010 E. 2nd St),Adams,Nebraska,-98.368371,40.584909,8/28/2024,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,50,1,34.4
+SHHD,1019,2024,PARK (Parkview Cemetary),Adams,Nebraska,-98.368428,40.598104,8/28/2024,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,50,1,34.2
+SHHD,1018,2024,PARK (Parkview Cemetary),Adams,Nebraska,-98.368428,40.598104,8/28/2024,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,50,1,32.5
+SHHD,1001,2024,HMS (Hastings Middle School),Adams,Nebraska,-98.42255,40.589086,8/28/2024,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,50,1,32.4
+SHHD,995,2024,GOEB (1010 E. 2nd St),Adams,Nebraska,-98.368371,40.584909,8/28/2024,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,50,1,32
+SHHD,998,2024,GOEB (1010 E. 2nd St),Adams,Nebraska,-98.368371,40.584909,8/28/2024,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,26,1,31.6
+SHHD,1020,2024,PARK (Parkview Cemetary),Adams,Nebraska,-98.368428,40.598104,8/28/2024,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,50,1,29.1
+SHHD,1026,2024,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,8/28/2024,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,50,1,29.1
+SHHD,1017,2024,PARK (Parkview Cemetary),Adams,Nebraska,-98.368428,40.598104,8/28/2024,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,50,1,28.7
+SHHD,1014,2024,PARK (Parkview Cemetary),Adams,Nebraska,-98.368428,40.598104,8/28/2024,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,50,1,24.9
+SHHD,1006,2024,HMS (Hastings Middle School),Adams,Nebraska,-98.42255,40.589086,8/28/2024,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,50,1,24.2
+SHHD,997,2024,GOEB (1010 E. 2nd St),Adams,Nebraska,-98.368371,40.584909,8/28/2024,35,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,50,1,23.4
+LBHD,1073,2024,Wayne Lakins,Garfield,Nebraska,-99.125258,41.790681,9/3/2024,36,CO2-CDC,CO2 (pressurized gas),Culex pipiens/restuans/salinarius,female,21,1,36.5
+DOHD,1061,2024,Seymour L. Smith Park,Douglas,Nebraska,-96.022357,41.194821,9/4/2024,36,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,1,1,37
+DOHD,1077,2024,Zorinsky Lake,Douglas,Nebraska,-96.1747,41.22528,9/4/2024,36,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,15,1,32
+WCHD,1082,2024,Centennial,Lincoln,Nebraska,-100.770109,41.119319,9/4/2024,36,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,9,1,21.9
+DOHD,1075,2024,Zorinsky Lake,Douglas,Nebraska,-96.1747,41.22528,9/4/2024,36,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,50,1,20
+FCHD,1147,2024,Four Corners HD (2101 N. Lincoln Ave.),York,Nebraska,-97.59441667,40.88166667,9/10/2024,37,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,1,1,36.8
+SHHD,1172,2024,GSV (Good Samaritin Village),Adams,Nebraska,-98.364481,40.577623,9/11/2024,37,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,19,1,38.5
+SHHD,1164,2024,GOEB (1010 E. 2nd St),Adams,Nebraska,-98.368371,40.584909,9/11/2024,37,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,50,1,34.8
+NNHD,1174,2024,Softball Complex,Wayne,Nebraska,-97.003837,42.228722,9/11/2024,37,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,50,1,24.8
+SHHD,1163,2024,GOEB (1010 E. 2nd St),Adams,Nebraska,-98.368371,40.584909,9/11/2024,37,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,50,1,22.4
+LLHD,1157,2024,West A,Lancaster,Nebraska,-96.7788153,40.8004435,9/11/2024,37,CO2-CDC,CO2 (dry ice),Culex tarsalis,female,43,1,22
+THHD,1189,2024,Arlington City Trail,Washington,Nebraska,-96.352926,41.455342,9/11/2024,37,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,4,1,20.9
+LBHD,1203,2024,Wayne Lakins,Garfield,Nebraska,-99.125258,41.790681,9/16/2024,38,CO2-CDC,CO2 (pressurized gas),Culex pipiens/restuans/salinarius,female,11,1,21.7
+DOHD,1208,2024,11th & Grace,Douglas,Nebraska,-95.927503,41.27686,9/17/2024,38,CO2-CDC,CO2 (dry ice),Culex pipiens/restuans/salinarius,female,50,1,37.4
