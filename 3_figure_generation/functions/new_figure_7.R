@@ -89,7 +89,7 @@ for (j in 1:3) {
         confint1 <- tryCatch({
           ci <- confint(fit)
           if(is.na(ci[1])) ci[1] <- 0
-          if(is.na(ci[2])) ci[1] <- 1
+          if(is.na(ci[2])) ci[2] <- 1
           ci
         }, error = function(e) {
           estms<-sapply(1:length(p_tests),function(x) prev_likelihood_real(f_kde=f_kde,ini_p=p_tests[x],n_pools=b_pools,
@@ -153,7 +153,7 @@ for (j in 1:3) {
       p_static_sim_prop<-p_static_sim/(p_dynamic_sim+p_static_sim)
       
       #also calculate the total prevalence<
-      p_calc_total<-p_dynamic_sim+p_dynamic_sim
+      p_calc_total<-p_dynamic_sim+p_static_sim
       
       #confidence intervals 
       ci_p_static  <- quantile(p_static_sim,  probs = c(.025, .975))
@@ -163,10 +163,6 @@ for (j in 1:3) {
       ci_prop_dynamic<-quantile(p_dynamic_sim_prop,  probs = c(.025, .975),na.rm=T)
       
       ci_total_calc<-quantile(p_calc_total,probs = c(.025, .975),na.rm=T)
-      
-      
-      
-      
       
       # optim_prev<-optim(runif(1),fn=prev_likelihood_real,f_kde=f_kde,n_pools=b_pools,n_sample_size=sample_size_i,
       # observed_ct_vec=observed_ct_vec,neg_lik=TRUE,method = "Brent",lower=0,upper=1)$par
@@ -246,7 +242,7 @@ for (j in 1:3) {
         confint1 <- tryCatch({
           ci <- confint(fit)
           if(is.na(ci[1])) ci[1] <- 0
-          if(is.na(ci[2])) ci[1] <- 1
+          if(is.na(ci[2])) ci[2] <- 1
           ci
         }, error = function(e) {
           estms<-sapply(1:length(p_tests),function(x) prev_likelihood_real(f_kde=f_kde,ini_p=p_tests[x],n_pools=b_pools,
@@ -311,7 +307,7 @@ for (j in 1:3) {
       p_static_sim_prop<-p_static_sim/(p_dynamic_sim+p_static_sim)
       
       #also calculate the total prevalence<
-      p_calc_total<-p_dynamic_sim+p_dynamic_sim
+      p_calc_total<-p_dynamic_sim+p_static_sim
       
       #confidence intervals 
       ci_p_static  <- quantile(p_static_sim,  probs = c(.025, .975))
@@ -436,12 +432,11 @@ all_esti_unique <- unique(all_esti)
 
 library(dplyr)
 
-# Ensure the key columns exist and have the same types in both data frames
-# (optional but recommended)
+
 # str(all_cdc[, c("yer", "week", "state")])
 # str(all_esti_unique[, c("yer", "week", "state")])
 
-# Example: keep all CDC rows and attach estimates when available
+
 combined <- all_cdc %>%
   left_join(all_esti_unique,
             by = c("yer" = "yer", "week" = "week", "state" = "state"),
@@ -450,8 +445,8 @@ combined <- all_cdc %>%
 #saveRDS(combined,"combined.RDS")
 
 combined <- readRDS("combined.RDS")
-
-pl_all_esti<-combined[,c(2:3, 4,7, 11,1)]
+pl_all_esti<-combined[,c("yer","week","cdc_prev","prev_esti","optim_p_dynamic","state")]
+#pl_all_esti<-combined[,c(2:3, 4,7, 11,1)]
 colnames(pl_all_esti)<-c("yer","week", "cdc", "overall", "dynamic",'state')
 m_pl_all_esti<-melt(pl_all_esti,id=c("yer","week",'state'))
 
@@ -468,9 +463,9 @@ names(m_all_esti_q2s)[names(m_all_esti_q2s) == "value"] <- "q2"
 m_all_esti_qs<-cbind(m_all_esti_q1s,"q2"=m_all_esti_q2s$q2)
 
 
-est_true_prev<-subset(m_pl_all_esti,state=="Nebraska" & !variable %in% c("overall","dynamic"))
+est_true_prev<-subset(m_pl_all_esti,state=="Nebraska" & !variable %in% c("overall","dynamic")) #just keep cdc
 levels(est_true_prev$variable)<-droplevels(est_true_prev$variable)
-levels(est_true_prev$variable)<-"dynamic"
+levels(est_true_prev$variable)<-"dynamic" #to plot this over the dynamic 
 est_true_prev_2<-est_true_prev
 est_true_prev_2$variable<-rep("overall")
 est_true_prev<-rbind(est_true_prev,est_true_prev_2)
@@ -502,7 +497,7 @@ p1<-ggplot(data=subset(m_pl_all_esti,state=="Nebraska"))+
     # Remove variable labels
     strip.text.x = element_blank(),
     
-    # ✔ Keep year labels (shown on right)
+
     strip.placement = "outside",
     strip.text.y.right = element_text(size = 12),
     
@@ -548,14 +543,12 @@ p2 <- ggplot(data=subset(m_pl_all_esti, state=="Colorado" & yer != 2024)) +
   ) +
   
   default_theme +
-  ggtitle("(A) Colorado") +
+  ggtitle("(B) Colorado") +
   theme(
     strip.background = element_blank(),
-    
-    # Remove variable labels
+  
     strip.text.x = element_blank(),
     
-    # ✔ Keep year labels (shown on right)
     strip.placement = "outside",
     strip.text.y.right = element_text(size = 12),
     
@@ -582,59 +575,318 @@ annotate_figure(fig, left = text_grob("Estimated prevalence", rot = 90,size=14))
 ggsave("figures/figure_7_v2.png",last_plot(),height = 11,width = 12)
 
 
-
-peaks <- combined %>%
-  group_by(state, yer) %>%
-  slice_max(order_by = optim_p_dynamic, n = 1, with_ties = FALSE) 
-peaks
-
-
-p1<-ggplot(data=subset(m_pl_all_esti,state=="Nebraska"))+
-  geom_ribbon(data=subset(m_all_esti_qs,state=="Nebraska"),
-              aes(x=week,ymin = q1,ymax = q2,fill =variable ))+
-  geom_line(aes(x=week,y=value))+
-  scale_fill_manual(values = c("#a86463","#ad7f00","#5d861f"),
-                     labels=c("Pooled Ct value-based ","Binarised data-based",
-                              "Pooled Ct value-based \n (Productive infection)"))+
-                
-  ylim(0,0.05)+
-  facet_wrap(variable~yer)+
-  default_theme+
-  ggtitle("(A) Nebraska")+
-  theme(
-    strip.background = element_blank(),
-    strip.text.x = element_blank()
-  )+
-  theme(legend.position = "none")
+# 
+# library(dplyr)
+# library(tidyr)
+# library(ggplot2)
+# library(forcats)
+# 
 
 
-p1
+combined$prop_dynamic<-combined$optim_p_dynamic/(combined$optim_p_dynamic+combined$optim_p_static)
+combined$prop_static<-combined$optim_p_static/(combined$optim_p_dynamic+combined$optim_p_static)
 
-p2<-ggplot(data=subset(m_pl_all_esti,state=="Colorado" & yer!=2024 ))+
-  geom_ribbon(data=subset(m_all_esti_qs,state=="Colorado" & yer!=2024 ),
-              aes(x=week,ymin = q1,ymax = q2,fill =variable ))+
-  geom_line(aes(x=week,y=value))+
-  scale_fill_manual(values = c("#a86463","#ad7f00","#5d861f"),
-                    labels=c("Pooled Ct value-based ","Binarised data-based",
-                             "Pooled Ct value-based \n (Productive infection)"))+
-  
-  ylim(0,0.05)+
-  facet_wrap(variable~yer,ncol=2)+
-  default_theme+
-  ggtitle("(B) Colorado")+
-  theme(
-    strip.background = element_blank(),
-    strip.text.x = element_blank()
+df <- combined %>%
+  mutate(
+    week = as.numeric(week),
+    yer  = as.factor(yer),
+    state = as.factor(state)
   )
 
 
-p2
+long_ribbons <- df %>%
+  transmute(
+    state, yer, week,
+    system = "Dynamic",
+    q1 = prop_dynamic_q1,
+    q2 = prop_dynamic_q2,
+     est = prop_dynamic,
+   
+   )
+
+all_dat<-rbind(dat_neb,dat_col)
+names(all_dat)[names(all_dat) == "surv_year"] <- "yer"
+names(all_dat)[names(all_dat) == "disease_week"] <- "week"
+
+long_ribbons_aug <- long_ribbons %>%
+  left_join(
+    all_dat %>% select(state, yer, week, ctval, pool_size),
+    by = c("state", "yer", "week")
+  )
+  
 
 
+#%>%
+  # bind_rows(
+  #   df %>%
+  #     transmute(
+  #       state, yer, week,
+  #       system = "Static",
+  #       q1 = prop_static_q1,
+  #       q2 = prop_static_q2,
+  # 
+  #       est = optim_p_static/(optim_p_dynamic+optim_p_static),
+  #     )
+  # ) %>%
+  # mutate(system = factor(system, levels = c("Static", "Dynamic")))  # set order in legend
 
-ggarrange(p1,p2,nrow = 2)
 
-ggsave("figures/figure_7_v2.png",last_plot(),height = 14,width = 14)
+long_ribbons <- long_ribbons %>%
+  filter(!(is.na(q1) & is.na(q2)))
 
+long_ribbons$state=factor(long_ribbons$state)
+long_ribbons$state=factor(long_ribbons$state,levels=c("Nebraska","Colorado"))
 
+p <- ggplot(long_ribbons, aes(x = week, group = yer)) +
+  # Ribbon for the interval
+  geom_ribbon(
+    aes(ymin = q1, ymax = q2, fill = system),
+    alpha = 0.20,
+    colour = NA
+  ) +
+  geom_line(
+    aes(y = est, colour = system),
+    linewidth = 0.9,
+    na.rm = TRUE
+  ) +
+  facet_wrap(state~yer, scales = "free_y", ncol = 3) +
+  scale_colour_manual(values = c("Static" = "#1f77b4", "Dynamic" = "darkred")) +
+  scale_fill_manual(values   = c("Static" = "#1f77b4", "Dynamic" = "darkred")) +
+  scale_x_continuous(breaks = scales::pretty_breaks(n = 6)) +
+  geom_hline(yintercept = 0.5, color = "black", linetype="dashed")+
+  #scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+  labs(
+    x = "Week",
+    y = "Proportion",
+    colour = "System",
+    fill   = "",
+    linetype = "Year",
+    title = "Estimated productive infection proportions by state"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position = "none",
+    panel.grid.minor = element_blank()
+  )
+
+p
+
+ggsave("figures/suplement_prod_prop.png",p,height =6,width = 12)
+
+# 
+# long_ribbons_aug <- long_ribbons_aug %>%
+#   filter(!(is.na(ctval)))
+# 
+# 
+# counts_yw <- long_ribbons_aug %>%
+#   count(yer, week,state)
+# head(counts_yw)
+# 
+# 
+# 
+# long_ribbons_x <- long_ribbons %>%
+#   left_join(
+#     counts_yw %>% select(state, yer, week, n),
+#     by = c("state", "yer", "week")
+#   )
+# 
+# head(long_ribbons_x)
+# 
+# p_bottom <- ggplot(counts_yw, aes(x = week, y= n)) +
+#   geom_col(fill = "grey50", width = 0.8) +
+#   facet_wrap(yer ~ state, scales = "free_y", ncol = 3) +
+#   labs(y = "Pools", x = "Week") +
+#   theme_minimal()
+# 
+# p_bottom
+# 
+# p_cts<-ggplot(long_ribbons_aug, aes(x = week, y = ctval)) +
+#   geom_point()+
+#   facet_wrap(yer ~ state, scales = "free_y", ncol = 3) +
+#   labs(y = "Ct", x = "Week") +
+#   theme_minimal()
+# 
+# 
+# pool_size<-ggplot(long_ribbons_aug, aes(x = week, y =pool_size )) +
+#   geom_point(aes(colour =(pool_size)))+
+#   facet_wrap(yer ~ state, scales = "free_y", ncol = 3) +
+#   labs(y = "Ct", x = "Week") +
+#   theme_minimal()
+# pool_size
+# 
+# p/p_cts/pool_size
+# 
+# 
+# ggplot(data=long_ribbons_aug,aes(x=week,y=pool_size,fill=ctval))+
+#   geom_tile()+  
+#   facet_grid(yer~state)
+# 
+# #number of pools that are positive 
+# counts_yw <- subset(long_ribbons_aug,ctval<40) %>%
+#   count(yer, week,state)
+# head(counts_yw)
+# 
+# #proportion:
+# 
+# counts_yw <- long_ribbons_aug %>%
+#   group_by(state, week,yer) %>%
+#   summarise(
+#     prop_ct_lt40 = mean(ctval < 40, na.rm = TRUE)
+#   )
+# counts_yw
+# 
+# ggplot(counts_yw, aes(x = week, y= prop_ct_lt40)) +
+#   geom_line() +
+#   facet_wrap(yer ~ state, scales = "free_y", ncol = 3) +
+#   labs(y = "Positive pools", x = "Week") +
+#   theme_minimal()
+# 
+# 
+# px <- ggplot(long_ribbons_x, aes(x = week, y =est)) +
+# geom_line()+
+#   facet_wrap(yer~ state, scales = "free_y", ncol = 3) 
+#  
+# px
+# 
+# 
+# 
+# 
+# coeff<-10
+# p <- ggplot(long_ribbons, aes(x = week, group = yer)) +
+#   # Ribbon for the interval
+#   geom_ribbon(
+#     aes(ymin = q1, ymax = q2, fill = system),
+#     alpha = 0.20,
+#     colour = NA
+#   ) +
+#   geom_line(
+#     aes(y = est, colour = system),
+#     linewidth = 0.9,
+#     na.rm = TRUE
+#   ) +
+#   geom_line(data=counts_yw,aes(x=week,y=-prop_ct_lt40*coeff))+
+#   scale_y_continuous(
+#     
+#     # Features of the first axis
+#     name = "Proportion",
+#     
+#     # Add a second axis and specify its features
+#     sec.axis = sec_axis(~-./coeff, name="Productive infection prevalance")
+#   )+
+#   facet_wrap(yer~ state, scales = "free_y", ncol = 3) +
+#   scale_colour_manual(values = c("Static" = "#1f77b4", "Dynamic" = "#d62728")) +
+#   scale_fill_manual(values   = c("Static" = "#1f77b4", "Dynamic" = "#d62728")) +
+#   scale_x_continuous(breaks = scales::pretty_breaks(n = 6)) +
+#   geom_hline(yintercept = 0.5, color = "blue")+
+#   # #scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+#   # labs(
+#   #   x = "Week",
+#   #   y = "Proportion",
+#   #   colour = "System",
+#   #   fill   = "",
+#   #   linetype = "Year",
+#   #   title = "Proportions by State",
+#   #   subtitle = "Static vs Dynamic"
+#   # ) +
+#   theme_minimal(base_size = 12) +
+#   theme(
+#     legend.position = "none",
+#     panel.grid.minor = element_blank()
+#   )
+# 
+# p
+# 
+# 
+# avg_by_week <- long_ribbons %>%
+#   group_by(week,state) %>%
+#   summarise(
+#     mean_est = mean(est, na.rm = TRUE),
+#     n = sum(!is.na(est))
+#   ) %>%
+#   arrange(week)
+# 
+# avg_by_week
+# 
+# 
+# 
+# ggplot(data=avg_by_week)+
+#   geom_line(aes(x=week,y=mean_est))+
+#   geom_hline(yintercept = 0.5, color = "blue")+
+#   facet_grid(~state)
+# 
+# 
+# 
+# 
+# x1<-ggplot(combined)+
+#   geom_line(aes(x=week,y=prev_esti),color="black")+
+#   geom_line(aes(x=week,y=optim_p_static+optim_p_dynamic),color="red")+
+#   facet_wrap(state~yer)
+# x1
+# 
+# x2<-ggplot(combined)+
+#   geom_line(aes(x=week,y=(optim_p_dynamic/(optim_p_dynamic+optim_p_static))))+
+#   facet_wrap(state~yer)
+# x2
+# 
+# x1/x2
+# 
+# 
+# 
+# 
+# 
+# 
+# peaks <- combined %>%
+#   group_by(state, yer) %>%
+#   slice_max(order_by = optim_p_dynamic, n = 1, with_ties = FALSE) 
+# peaks
+# 
+# 
+# p1<-ggplot(data=subset(m_pl_all_esti,state=="Nebraska"))+
+#   geom_ribbon(data=subset(m_all_esti_qs,state=="Nebraska"),
+#               aes(x=week,ymin = q1,ymax = q2,fill =variable ))+
+#   geom_line(aes(x=week,y=value))+
+#   scale_fill_manual(values = c("#a86463","#ad7f00","#5d861f"),
+#                      labels=c("Pooled Ct value-based ","Binarised data-based",
+#                               "Pooled Ct value-based \n (Productive infection)"))+
+#                 
+#   ylim(0,0.05)+
+#   facet_wrap(variable~yer)+
+#   default_theme+
+#   ggtitle("(A) Nebraska")+
+#   theme(
+#     strip.background = element_blank(),
+#     strip.text.x = element_blank()
+#   )+
+#   theme(legend.position = "none")
+# 
+# 
+# p1
+# 
+# p2<-ggplot(data=subset(m_pl_all_esti,state=="Colorado" & yer!=2024 ))+
+#   geom_ribbon(data=subset(m_all_esti_qs,state=="Colorado" & yer!=2024 ),
+#               aes(x=week,ymin = q1,ymax = q2,fill =variable ))+
+#   geom_line(aes(x=week,y=value))+
+#   scale_fill_manual(values = c("#a86463","#ad7f00","#5d861f"),
+#                     labels=c("Pooled Ct value-based ","Binarised data-based",
+#                              "Pooled Ct value-based \n (Productive infection)"))+
+#   
+#   ylim(0,0.05)+
+#   facet_wrap(variable~yer,ncol=2)+
+#   default_theme+
+#   ggtitle("(B) Colorado")+
+#   theme(
+#     strip.background = element_blank(),
+#     strip.text.x = element_blank()
+#   )
+# 
+# 
+# p2
+# 
+# 
+# 
+# ggarrange(p1,p2,nrow = 2)
+# 
+# ggsave("figures/figure_7_v2.png",last_plot(),height = 14,width = 14)
+# 
+# 
 
