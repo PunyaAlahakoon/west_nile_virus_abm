@@ -82,7 +82,7 @@ for (i in 1:52) {
       confint1 <- tryCatch({
         ci <- bbmle::confint(fit)
         if(is.na(ci[1])) ci[1] <- 0
-        if(is.na(ci[2])) ci[1] <- 1
+        if(is.na(ci[2])) ci[2] <- 1
         ci
       }, error = function(e) {
         c(0, 1)
@@ -122,7 +122,7 @@ for (i in 1:52) {
     p_static_sim_prop<-p_static_sim/(p_dynamic_sim+p_static_sim)
     
     #also calculate the total prevalence<
-    p_calc_total<-p_dynamic_sim+p_dynamic_sim
+    p_calc_total<-p_dynamic_sim+p_static_sim
     
     #confidence intervals 
     ci_p_static  <- quantile(p_static_sim,  probs = c(.025, .975))
