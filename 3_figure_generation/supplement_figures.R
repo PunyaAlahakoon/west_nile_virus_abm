@@ -214,6 +214,93 @@ source("functions/clean_colorado_data.R")
 dat_col<-clean_colorado_data()
 all_dat=rbind(dat_col,dat_neb)
 
+#estimated prevalances for the them 
+combined <- readRDS("combined.RDS")
+combined <- combined %>%  
+  rename(  surv_year = yer,    disease_week = week  )
+
+combined$surv_year=as.factor(combined$surv_year)
+
+nebbb_summary <- all_dat %>%
+  group_by(surv_year, disease_week,state) %>%
+  summarise(
+    n_pools = n(),                                 # total number of pools tested
+    mean_Ct = mean(ctval, na.rm = TRUE),              # mean Ct across all pools
+    min_Ct = min(ctval, na.rm = TRUE),                # minimum Ct
+    max_Ct = max(ctval, na.rm = TRUE),                # maximum Ct
+    n_positive = sum(WNV == "1", na.rm = TRUE),  # count of positive pools
+    mean_Ct_positive = mean(ctval[WNV == "1"], na.rm = TRUE), # mean Ct only positives
+    avg_pool_size = mean(pool_size, na.rm = TRUE)  # average pool size
+  ) %>%
+  ungroup()
+
+nebbb_summary$surv_year=as.factor(nebbb_summary$surv_year)
+
+# combined_neb=subset(combined,combined$state=="Nebraska")
+# Keep only rows that match in BOTH dataframe
+joined_inner <- nebbb_summary %>%  inner_join(combined, by = c("surv_year", "disease_week","state"))
+
+joined_inner <- joined_inner %>%
+  mutate(
+    cdc_combined = paste0(
+      round(cdc_prev, 3), " (",
+      round(q1_cdc, 3), ", ",
+      round(q2_cdc, 3), ")"
+    ), 
+    ct_overall_combined = paste0(
+      round(prev_esti, 3), " (",
+      round(q1_esti, 3), ", ",
+      round(q2_esti, 3), ")"
+    ), 
+   optim_p_combined = paste0(
+      round(optim_p_dynamic, 3), " (",
+      round(dynamic_q1, 3), ", ",
+      round(dynamic_q2, 3), ")"
+    )
+  )
+
+joined_inner_f=cbind(joined_inner[,c(1:10)],joined_inner[,c("cdc_combined","ct_overall_combined","optim_p_combined")])
+
+neb_set<-subset(joined_inner_f,state=="Nebraska")
+col_set<-subset(joined_inner_f,state=="Colorado")
+library(xtable)
+
+col_set$avg_pool_size=round(col_set$avg_pool_size)
+xtable(neb_set[,-3])
+xtable(col_set[,-3])
+
+
+
+ci_summary <- joined_inner %>%
+  mutate(
+    binary_prev = round(cdc_prev, 5),
+    binary_width = round(q2_cdc, 5) - round(q1_cdc, 5),
+    
+    ct_prev = round(prev_esti, 5),
+    ct_width = round(q2_esti, 5) - round(q1_esti, 5),
+    
+    binary_rel_width = if_else(binary_prev > 0, binary_width / binary_prev),
+    ct_rel_width = if_else(ct_prev > 0, ct_width / ct_prev),
+    
+    binary_width_for_zeros = if_else(binary_prev == 0, binary_width)
+    ct_width_for_zeros = if_else(ct_prev == 0, ct_width)
+  ) %>%
+  group_by(state) %>%
+  summarise(
+    mean_binary_width_when_binary_zero = mean(binary_width_for_zeros, na.rm = TRUE),
+    mean_ct_width_when_ct_zero = mean(ct_width_for_zeros, na.rm = TRUE),
+   
+    
+    mean_binary_rel_width_when_binary_positive =
+      mean(binary_rel_width, na.rm = TRUE),
+    mean_ct_rel_width_when_ct_positive =
+      mean(ct_rel_width, na.rm = TRUE),
+    
+    .groups = "drop"
+  )
+
+
+
 p_v2<-ggplot(all_dat,aes(x=disease_week,y=ctval,colour=state))+
   geom_point()+
   facet_wrap(~(as.factor(surv_year)),ncol=3)+
