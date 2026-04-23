@@ -28,15 +28,7 @@ grids$static<-(grids$Var1/grids$Var2)-grids$Var1
 colnames(grids)<-c("p_dynamic","prop","pool_sizes","n_pools","p_static")
 p_combi <- crossing(rep = 1:100, grids)
 
-# 
-# # grid$prop=rep(prop)
-# # 
-# # grid <- grid %>%  
-# #   left_join(px_grid[, c("p_static_true", "p_dynamic_true", "prop")],       
-# #              by = c("p_static_true", "p_dynamic_true"))
-#  
 
-#
  n_prev<-nrow(p_combi)
 #
  n_prev
@@ -135,27 +127,8 @@ ggarrange(p1,p2,ncol=1,common.legend = T, legend = "bottom")
 
 ggsave("figures/coverage.png",last_plot(),height = 10,width = 14)
 
-# n_dat<-subset(optim_prev_esti,true_Prevalence=="Productive infection \n prevalenc = 0.001" & true_dynamic_prop==0.01 & n_pools==100)
-# 
-# n_dat <- n_dat %>%
-#   mutate(
-#     rep_id = dplyr::row_number(),                    # explicit replication index
-#     ci_width = dynamic_q2 - dynamic_q1,
-#     covered = (dynamic_q1 <= p_dynamic) & (dynamic_q2 >= p_dynamic)
-#   )
-# coverage_rate <- mean(n_dat$covered, na.rm = TRUE)
 
 
-# library(dplyr)
-# library(ggplot2)
-# library(scales)
-# library(patchwork)
-
-# ---------------------------
-# Starting dataset: dat
-# No hard subsetting here; we prepare the whole dataset and facet.
-# If you want to restrict to a subset of prevalence / dyn prop values,
-# you can filter dat before the pipeline below.
 
 optim_prev_esti$covered<-(optim_prev_esti$dynamic_q1 <= optim_prev_esti$p_dynamic_true) & (optim_prev_esti$dynamic_q2 >= optim_prev_esti$p_dynamic_true)
 
@@ -167,27 +140,7 @@ optim_prev_esti <- optim_prev_esti %>%
   ) %>%
   ungroup()
 
-# df <- optim_prev_esti %>%
-#   # parse numeric true prevalence from strings like "Prevalence = 0.001"
-#   mutate(
-#     true_prev = p_dynamic
-#   ) %>%
-#   # keep only rows with needed columns present
-#   filter(!is.na(dynamic_q1) & !is.na(dynamic_q2) & !is.na(p_dynamic)) %>%
-#   # compute coverage and CI width
-#   mutate(
-#     ci_width = dynamic_q2 - dynamic_q1,
-#     covered = (dynamic_q1 <= true_prev) & (dynamic_q2 >= true_prev)
-#   ) %>%
-#   # group by condition so we can create a replication index sorted by estimate
-#   group_by(true_Prevalence, true_prev, true_dynamic_prop, n_pools) %>%
-#   arrange(p_dynamic, .by_group = TRUE) %>%
-#   mutate(
-#     rep_in_group = row_number()
-#   ) %>%
-#   ungroup()
 
-# summary table with empirical coverage per facet (for annotation)
 coverage_summary <- optim_prev_esti %>%
   group_by(true_Prevalence, p_dynamic_true, true_dynamic_prop, n_pools) %>%
   summarise(
@@ -197,9 +150,6 @@ coverage_summary <- optim_prev_esti %>%
     .groups = "drop"
   )
 
-# # choose a sensible y limit for plots (zoom) -- avoids extreme zooming
-# ymax <- min(1, max(df$dynamic_q2, na.rm = TRUE) * 1.05)
-# ymax <- max(ymax, 0.05)  # ensure a small top range for very small prevalences
 
 
 
