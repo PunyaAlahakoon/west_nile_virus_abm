@@ -1,6 +1,7 @@
 # Tracking West Nile Virus dynamics using viral loads from trapped mosquitoes
 
-### This folder contains all the codes and synthetic data generated, and observed data used in this manuscript by P. Alahakoon, I. Marchinton, J. Fauver, and J. Hay.  
+
+### This folder contains all the codes and synthetic data generated, and observed data used in this manuscript by P. Alahakoon, I. Marchinton, J. Fauver, and J. Hay.  eLife  DOI: https://doi.org/10.7554/eLife.111900.3
 
 #### Open the folders in their numbered order. Each folder has a README file that contains more information about the content of the folder. 
 
